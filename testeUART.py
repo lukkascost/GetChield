@@ -8,23 +8,22 @@ serialPort.flushInput()
 serialPort.flushOutput()
 
 while(1==1):
-	outStr = raw_input('COMANDO: ')
-	inStr = ''
-	
-	
-	while (inStr is ""):
-	    serialPort.write(outStr)
-	    time.sleep(0.05)
-	    inStr = serialPort.read(serialPort.inWaiting())
-	    
-	    print "inStr =  " + inStr
-	    print "outStr = " + outStr
-	
-	    if(inStr is not ""):
-	        print "WORKED! "
-		break
-	    else:
-	        print "failed"
+    outStr = raw_input('COMANDO: ')
+    inStr = ''
 
+
+    while (inStr is ""):
+        serialPort.write(outStr)
+        time.sleep(0.05)
+        inStr = serialPort.read(serialPort.inWaiting())
+
+        print "inStr =  " + inStr
+        print "outStr = " + outStr
+
+        if(inStr is not ""):
+            print "WORKED! "
+            break
+        else:
+            print "failed"
 serialPort.close()
 
