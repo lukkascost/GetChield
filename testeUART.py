@@ -1,27 +1,28 @@
 from serial import Serial
 import time
 
-serialPort = Serial("/dev/serial0", 9600, timeout=2.0)	
+serialPort = Serial("/dev/ttyAMA0", 9600, timeout=2.0)	
 if (serialPort.isOpen() == False):
     serialPort.open()
 serialPort.flushInput()
 serialPort.flushOutput()
 
 while(1==1):
-    outStr = raw_input('COMANDO: ')
+    time.sleep(0.2)
+    outStr = "AT+RSSI?"
     inStr = ''
     while (inStr is ""):
         serialPort.write(outStr)
         time.sleep(0.05)
         inStr = serialPort.read(serialPort.inWaiting())
 
-        print "inStr =  " + inStr
-        print "outStr = " + outStr
+#        print "inStr =  " + inStr
+#        print "outStr = " + outStr
 
         if(inStr is not ""):
-            print "WORKED! "
+            print "Resultado: {}".format(inStr)
             break
         else:
-            print "failed"
+            print ""
 serialPort.close()
 
