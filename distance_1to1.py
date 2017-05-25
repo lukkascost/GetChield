@@ -27,7 +27,7 @@ signal  = 0
 while(signal<1000):
     print measurements
     lista = []
-    time.sleep(1)
+    time.sleep(2)
     outStr = "AT+RSSI?"
     inStr = ''
     while (inStr is ""):
