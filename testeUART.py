@@ -16,9 +16,6 @@ while(1==1):
         time.sleep(0.05)
         inStr = serialPort.read(serialPort.inWaiting())
 
-#        print "inStr =  " + inStr
-#        print "outStr = " + outStr
-
         if(inStr is not ""):
             print "Resultado: {}".format(inStr)
             break

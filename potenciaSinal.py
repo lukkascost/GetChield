@@ -1,15 +1,15 @@
 # -*- coding: cp1252 -*-
 from math import *
-potencias = [-x for x in range(1,102) ]
+potencias = [-x for x in range(1,110) ]
 pl0 = [ -x for x in potencias]
-pd0 = -30
-n = 2.5
+pd0 = 6
+n = 3.5
 def distanciaPotenciaSinal(potencias, qtd, pd0, n):
     for i in range (0, qtd):
         expoente = ((pd0-potencias[i])/(10*n))
         distance = pow(10, expoente)
         mts = distance/100
-        print "DISTÂNCIA {:010.10f} \t POTÊNCIA {:03d}".format(mts,potencias[i])
+        print "DISTANCIA {:03.08f} \t\tPOTENCIA {:03d}".format(float(mts),potencias[i])
 
 
 
