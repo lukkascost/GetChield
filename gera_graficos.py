@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 valors = np.zeros((10,1000))
-for i in range(0,10):
+for i in [0,1,2,3,4,5,6,7,8,9]:
     arquivo = open("Medicoes/{:01.1f}Metro.txt".format(float(i+1)/10))
     print "Medicoes/{:01.1f}Metro.txt".format(float(i+1)/10)
     for j,k in enumerate(arquivo):
@@ -9,7 +9,7 @@ for i in range(0,10):
         valors[i,j] = int(k)
     arquivo.close()
     print "ok"
-distancias = [float(x)/10 for x in range(1,11)]
+distancias = [float(x)/10 for x in [1,2,3,4,5,6,7,8,9,10]]
 medias = [np.average(x) for x in valors]
 stDevian = [np.std(x) for x in valors]
 
