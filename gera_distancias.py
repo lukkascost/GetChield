@@ -49,7 +49,7 @@ while(signal<1000):
 
 serialPort.close()
 
-arquivo = open("Medicoes/2.0Metro.txt", mode='w')
+arquivo = open("Medicoes/3.0Metro.txt", mode='w')
 for i in measurements:
     arquivo.write(str(i))
     arquivo.write("\n")
