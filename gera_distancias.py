@@ -23,9 +23,9 @@ serialPort.flushOutput()
 
 signal  = 0
 while(signal<1000):
-    print measurements[signal]
+    if signal>0:print (measurements[signal-1], distanceOfSignalPower(measurements[signal-1],n=n))
     lista = []
-    time.sleep(1)
+#    time.sleep(1)
     outStr = "AT+RSSI?"
     inStr = ''
     while (inStr is ""):
@@ -49,7 +49,7 @@ while(signal<1000):
 
 serialPort.close()
 
-arquivo = open("1.0Metro.txt", mode='w')
+arquivo = open("Medicoes/0.8Metro.txt", mode='w')
 for i in measurements:
     arquivo.write(str(i))
     arquivo.write("\n")
