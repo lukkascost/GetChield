@@ -1,8 +1,5 @@
 # -*- coding: cp1252 -*-
-from math import *
-from serial import Serial
-import time
-import numpy as np
+from methods import *
 measurements = [] 
 potencias = [-x for x in range(1,110) ]
 pl0 = [ -x for x in potencias]
@@ -12,7 +9,7 @@ def distanciaPotenciaSinal(potencias, qtd, pd0, n):
         res = []
         for i in range (0, qtd):
                 expoente = ((pd0-potencias[i])/(10*n))
-                distance = pow(10, expoente)
+                distance = mt.pow(10, expoente)
                 mts = distance/100
                 res.append(mts)
         return res

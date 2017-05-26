@@ -1,12 +1,10 @@
 # -*- coding: cp1252 -*-
-from math import *
-from serial import Serial
-import time
+from methods import *
 measurements = [] 
 potencias = [-x for x in range(1,110) ]
 pl0 = [ -x for x in potencias]
 pd0 = 6
-n = 3.5
+n = 2.935
 def distanciaPotenciaSinal(potencias, qtd, pd0, n):
     res = []
     for i in range (0, qtd):
@@ -25,9 +23,9 @@ serialPort.flushOutput()
 
 signal  = 0
 while(signal<1000):
-    print measurements
+    print measurements[signal]
     lista = []
-   # time.sleep(0.2)
+    time.sleep(1)
     outStr = "AT+RSSI?"
     inStr = ''
     while (inStr is ""):

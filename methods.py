@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import math as mt
+from serial import Serial
+import time
 def load_archive(path,cast = None):
         """ 
         Reads a archive in path and return it.

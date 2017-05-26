@@ -1,4 +1,5 @@
 from methods import *
+from matplotlib.lines import Line2D
 pd0 = 6.0
 n = 4.0
 MinimalN = np.zeros(10)
@@ -9,6 +10,7 @@ for j,i in enumerate([0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.9,1.0]):
         values = np.array(load_archive("Medicoes/{}Metro.txt".format(i), cast="int"))
         while(medStd<i):
                 resultado = distanceOfSignalPower(np.average(values),pd0=pd0, n=n)
+                #print n, resultado, i
                 devian = distanceOfSignalPower(np.std(values), pd0=pd0, n=n)
                 medStd = resultado-devian
                 MinimalN[j] = n
@@ -21,6 +23,7 @@ for j,i in enumerate([0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.9,1.0]):
         values = np.array(load_archive("Medicoes/{}Metro.txt".format(i), cast="int"))
         while(medStd>i):
                 resultado = distanceOfSignalPower(np.average(values),pd0=pd0, n=n)
+                #print n, resultado, i
                 devian = distanceOfSignalPower(np.std(values), pd0=pd0, n=n)
                 medStd = resultado+devian
                 MaximalN[j] = n
@@ -38,9 +41,15 @@ while(n<4.0):
         adiciona = True
         for i in range(10):
                 if n not in conjuntos[i]:
-                        print n," nao esta em ", conjuntos[i]
+                      #  print n," nao esta em ", conjuntos[i]
                         adiciona = False
         if adiciona: bestn.append(n)
-        n+=0.001
-        
+        n+=0.001        
 print bestn
+
+x = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.9,1.0,0.8]
+plt.plot(x,MaximalN,label="Minimos",linestyle= 'None',markersize=10, marker =r'$\lambda$')
+plt.plot(x,MinimalN,label="Maximos",linestyle='None',markersize=10,marker = r'$\lambda$')
+plt.show()
+print MaximalN
+print MinimalN
