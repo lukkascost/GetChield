@@ -1,6 +1,6 @@
-from methods import *
-import time
-from trilateracao import *
+from lib.Circle import *
+import numpy as np
+import matplotlib.pyplot as plt
 beacons  = [[0,0,1000],[10,-10,1000],[-10,-10,1000]]
 children = np.matrix([[x,x-200] for x in range(100,900)])
 real = [[x for x in range(100,900)],[x for x in range(-100,700)]]
@@ -69,11 +69,13 @@ p3 =   point(-10, -10)
         #print x[len(x)-1], y[len(y)-1],i
    ## plt.savefig("PONTOS/{:03d}.png".format(i))
     ##ax.clear()
+ax.plot(real[0],real[1], label="REAL")
+ax.plot(x,y,label="MEDIDO")
 ax.legend()
 plt.xlim(-1000,1000)
 plt.ylim(-1000,1000)
 ax.grid(True) 
-ax.plot(real[0],real[1], label="REAL")
-ax.plot(x,y,label="MEDIDO")
+
+
 
 plt.show()
