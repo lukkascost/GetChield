@@ -22,5 +22,5 @@ for step in range(800):
         plt.xlim([-1000,1000])
         plt.ylim([-1000,1000])
         plt.savefig("Samples/Tests/easy/Images/{:04d}.png".format(step),bbox_inches='tight',dpi=400)
-        #plt.show()
+        plt.show()
         ax.clear()
