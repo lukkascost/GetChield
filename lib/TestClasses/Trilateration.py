@@ -104,7 +104,19 @@ class trilateration_distances(object):
                                 graf[j,0] = mt.cos(t[j])*self.distances[step][i].radius + self.distances[step][i].center.x
                                 graf[j,1] = mt.sin(t[j])*self.distances[step][i].radius + self.distances[step][i].center.y
                         ax.plot(graf[:,0],graf[:,1], label = "distance Beacon {:02d}".format(i+1), linestyle='-.')          
-                
+        def toImages(self,path):
+                for step in range(self.road.npoints):
+                        print "saving img {:04d}..".format(step)
+                        fig, ax = plt.subplots()
+                        self.appendToAx(ax,step)
+                        self.beacons.appendToAx(ax)
+                        self.road.appendToAx(ax)
+                        ax.legend()
+                        ax.grid(1)
+                        plt.xlim([-1100,1100])
+                        plt.ylim([-1100,1100])
+                        plt.savefig("{}{:04d}.png".format(path,step),bbox_inches='tight',dpi=400)
+                        ax.clear()                
         def save(self,path):
                 pk.dump(self, open(path,"w"))
                 print "Arquivo salvo com sucesso em ",path
