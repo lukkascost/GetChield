@@ -18,6 +18,7 @@ maximo = [np.max(x) for x in valors]
 minimo = [np.min(x) for x in valors]
 
 print valors
+print minimo
 plt.plot(distancias,maximo, label="max - std")
 plt.plot(distancias,medias, label="media")
 plt.plot(distancias,minimo, label="max - std")
