@@ -9,7 +9,7 @@ serialPort.flushOutput()
 
 while(1==1):
     time.sleep(0.2)
-    outStr = "AT+RSSI?"
+    outStr = raw_input("texto:")
     inStr = ''
     while (inStr is ""):
         serialPort.write(outStr)

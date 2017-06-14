@@ -1,5 +1,5 @@
 # -*- coding: cp1252 -*-
-from methods import *
+from Classes import *
 measurements = [] 
 potencias = [-x for x in range(1,110) ]
 pl0 = [ -x for x in potencias]
@@ -49,7 +49,7 @@ while(signal<1000):
 
 serialPort.close()
 
-arquivo = open("Medicoes/4.3Metro.txt", mode='w')
+arquivo = open("Samples/Measurements/One_To_One/Suspend/0100cm.txt", mode='w')
 for i in measurements:
     arquivo.write(str(i))
     arquivo.write("\n")

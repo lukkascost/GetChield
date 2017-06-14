@@ -1,5 +1,5 @@
 # -*- coding: cp1252 -*-
-from methods import *
+from Classes import *
 measurements = [] 
 potencias = [-x for x in range(1,110) ]
 pl0 = [ -x for x in potencias]
