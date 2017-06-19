@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 valors = np.zeros((11,999))
 for h,i in enumerate([99,199,299,399,499,599,699,799,899,999,1099]):
-    arquivo = open("Samples/Measurements/One_To_One/Suspend/{:04d}cm.txt".format((i+1)))
+    arquivo = open("Samples/Measurements/One_To_One/Suspend_-23dbm/{:04d}cm.txt".format((i+1)))
     print "Samples/Measurements/One_To_One/Suspend/{:04d}cm.txt".format((i+1))
     for j,k in enumerate(arquivo):
         if j == 999: break
@@ -17,10 +17,15 @@ stDevian = [np.std(x) for x in valors]
 maximo = [np.max(x) for x in valors]
 minimo = [np.min(x) for x in valors]
 
+maximo = np.multiply(maximo, -1)
+minimo = np.multiply(minimo, -1)
+medias = np.multiply(medias, -1)
+
 print valors
 print minimo
-plt.plot(distancias,maximo, label="max - std")
+plt.plot(distancias,maximo, label="maximo")
 plt.plot(distancias,medias, label="media")
-plt.plot(distancias,minimo, label="max - std")
+plt.plot(distancias,minimo, label="minimo")
 plt.grid(True)
+plt.legend()
 plt.show()
