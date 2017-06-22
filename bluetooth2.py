@@ -16,23 +16,23 @@ time.sleep(0.2)
 
 def enviaCommando(command, serial): 
         inStr = ''
-        while (inStr is ""):
+	print "escrevendo ",command
+        while (inStr.find("DISCE")==-1):
                 serial.write(command)
-                time.sleep(0.05)
-                inStr = serial.read(serial.inWaiting())
+                time.sleep(1)
+                inStr += serial.read(serial.inWaiting())
         
                 if(inStr is not ""):
                         print "Resultado: {}".format(inStr)
                         break
                 else:
                         pass
-print "Conectando bl1..."
-enviaCommando("AT+CON{}".format(macs[0]), serial)
-enviaCommando("AT+CLEAR".format(macs[0]), serial)
-print "Conectando bl2..."
-enviaCommando("AT+RSSI?".format(macs[2]), serial)
-enviaCommando("AT+CON{}".format(macs[2]), serial)
-enviaCommando("AT+CLEAR".format(macs[2]), serial)
+while(1==1):
+	print
+	print "Conectando bl1..."
+	enviaCommando("AT+DISI?".format(macs[0]), bl1)
+	print "Conectando bl2..."
+	enviaCommando("AT+DISI?".format(macs[2]), bl2)
 print "Conectando bl3..."
 
 
