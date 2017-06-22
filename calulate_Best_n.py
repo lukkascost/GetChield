@@ -1,55 +1,48 @@
 from methods import *
 from matplotlib.lines import Line2D
-pd0 = 6.0
-n = 4.0
-MinimalN = np.zeros(10)
-MaximalN = np.zeros(10)
-for j,i in enumerate([0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.9,1.0]):
-        medStd = 0
-        n = 4
-        values = np.array(load_archive("Medicoes/{}Metro.txt".format(i), cast="int"))
-        while(medStd<i):
-                resultado = distanceOfSignalPower(np.average(values),pd0=pd0, n=n)
-                #print n, resultado, i
-                devian = distanceOfSignalPower(np.std(values), pd0=pd0, n=n)
-                medStd = resultado-devian
-                MinimalN[j] = n
-                n-=0.001
-        #print MinimalN[j], medStd
-        
-for j,i in enumerate([0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.9,1.0]):
-        medStd = 10000
-        n = 2
-        values = np.array(load_archive("Medicoes/{}Metro.txt".format(i), cast="int"))
-        while(medStd>i):
-                resultado = distanceOfSignalPower(np.average(values),pd0=pd0, n=n)
-                #print n, resultado, i
-                devian = distanceOfSignalPower(np.std(values), pd0=pd0, n=n)
-                medStd = resultado+devian
-                MaximalN[j] = n
-                n+=0.001
-conjuntos = []
-for i in range(10):
-        conjuntos.append([])
-        atual = MinimalN[i]
-        while(atual<=MaximalN[i]):
-                conjuntos[i].append(round(float(atual),3))
-                atual+=0.001
-bestn = []
-n = 2.0
-while(n<4.0):
-        adiciona = True
-        for i in range(10):
-                if n not in conjuntos[i]:
-                      #  print n," nao esta em ", conjuntos[i]
-                        adiciona = False
-        if adiciona: bestn.append(n)
-        n+=0.001        
-print bestn
+import time
+import collections as cl
 
-x = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.9,1.0,0.8]
-plt.plot(x,MaximalN,label="Minimos",linestyle= 'None',markersize=10, marker =r'$\lambda$')
-plt.plot(x,MinimalN,label="Maximos",linestyle='None',markersize=10,marker = r'$\lambda$')
-plt.show()
-print MaximalN
-print MinimalN
+def kernel_1(rssi):
+        return -np.min(rssi)
+def kernel_2(rssi):
+        return -np.max(rssi)
+def kernel_3(rssi):
+        return -cl.Counter(rssi).most_common()[0][0]
+
+def distanceOfSignalPower(power,pd0=6.0,n=3.65):
+        exp = ((pd0-float(power))/(10*n))
+        distance = mt.pow(10,exp)
+        return float(distance)
+
+def calculate_best_n(kernel, rssiArray,distancesArray,pd0=6.0):
+        bestRssi = []
+        
+        for j,i in enumerate(rssiArray):
+                n = 2.0
+                brs = kernel(i)
+                distancia = distanceOfSignalPower(brs, pd0=pd0, n=n)
+                if distancia > distancesArray[j]:
+                        while distancia > distancesArray[j]:
+                                n += 0.0001
+                                distancia = distanceOfSignalPower(brs, pd0=pd0, n=n)
+                        bestRssi.append(n)
+                else :
+                        bestRssi.append(n)      
+        return bestRssi
+
+pd0 = -23.0
+array = [100, 200,300,400,500,600,700,800,900,1000,1100]
+n = 4.0
+rssi = []
+MinimalN = np.zeros(len(array))
+MaximalN = np.zeros(len(array))
+for j,i in enumerate(array):
+        rssi.append(load_archive("Samples/Measurements/One_To_One/Suspend_-23dbm/{:04d}cm.txt".format(i), cast="int"))
+bestis =  calculate_best_n(kernel_3 , rssi, array, pd0=6.0)
+
+print bestis
+valores = []
+for i in rssi[10]:
+        valores.append(distanceOfSignalPower(-i, pd0=6.0, n=max(bestis)))
+print np.average(valores), np.std(valores)
