@@ -1,7 +1,7 @@
 from serial import Serial
 import time
 
-serialPort = Serial("/dev/ttyAMA0", 9600, timeout=2.0)	
+serialPort = Serial("/dev/ttyUSB0", 9600, timeout=2.0)	
 if (serialPort.isOpen() == False):
     serialPort.open()
 serialPort.flushInput()
