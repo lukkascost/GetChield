@@ -89,10 +89,16 @@ class bluetooth(Thread):
                         if i.mac == mac: return i
                 return "Point not Found!"
         def run(self):
+		i = 0
                 while True:
                         beacon = self.search_Ibeacons_mac(self.searchmac)
                         if isinstance(beacon,ibeacon) :
                                 self.resBeacon = beacon
+				i+=1
+				print i
+				with open("1m.txt", mode='a') as f:
+					f.write(str(beacon.rssi)+"\n")
+					f.close()
                         else: 
                                 print beacon 
         def get_resbeacon(self): return self.resBeacon
