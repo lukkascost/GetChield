@@ -27,7 +27,7 @@ rank = 5
 for i in range(2):
         temp = np.argpartition(-toPlot[i], rank)
         result_args = temp[:rank]        
-        plt.scatter(x,toPlot[i],label = "RSSI MODA {:02d}m".format(i+1))
+        plt.plot(x,toPlot[i],label = "RSSI MODA {:02d}m".format(i+1))
         print "{} mais recorrentes de {:02d}m: {}\t Media: {}\t StdDev: {}".format(rank,i+1,result_args,np.average(result_args), np.std(result_args))
 plt.grid(True)
 plt.legend()
