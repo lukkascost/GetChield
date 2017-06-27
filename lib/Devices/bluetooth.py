@@ -44,12 +44,16 @@ class bluetooth(Thread):
                 self.serialPort = Serial(port, baud, timeout=timeout)
                 self.searchmac = mac
                 self.resBeacon = None
+		self.x = -1
+		self.y = -1
         def connect(self):
                 if (self.serialPort.isOpen() == False):
                         self.serialPort.open()
                 self.serialPort.flushInput()
                 self.serialPort.flushOutput()   
                 return self.send("AT").find("OK")
+	def bluetooth_name(self):
+		return self.send("AT+NAME?").replace("OK+NAME:","")
         def search_Ibeacons(self):
                 inStr = ''
                 if self.connect() == -1: return [-1]
