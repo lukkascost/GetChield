@@ -116,7 +116,32 @@ class trilateration_distances(object):
                         plt.xlim([-1100,1100])
                         plt.ylim([-1100,1100])
                         plt.savefig("{}{:04d}.png".format(path,step),bbox_inches='tight',dpi=384)
-                        ax.clear()                
+                        ax.clear()           
+        def get_radius(self,step):
+                rad = mt.atan2(self.points[step].y,self.points[step].x)
+                return rad*(180/mt.pi)
+        def get_direction(self,step):
+                radian = int(self.get_radius(step))
+                print radian
+                if (radian >337.5 and radian <=360.0) or (radian>=0.0 and radian<=22.5):
+                        return "LESTE"
+                elif (radian >22.5 and radian<=67.5):
+                        return "NORDESTE"
+                elif (radian >67.5 and radian<=112.5):
+                        return "NORTE"
+                elif (radian >112.5 and radian<=157.5):
+                        return "NOROESTE"
+                elif (radian >157.5 and radian<=202.5):
+                        return "OESTE"
+                elif (radian >202.5 and radian<=247.5):
+                        return "SUDOESTE"
+                elif (radian >247.5 and radian<=292.5):
+                        return "SUL"
+                elif (radian >292.5 and radian<=337.5):
+                        return "SUDESTE"
+                                
+                                                
+                        
         def save(self,path):
                 pk.dump(self, open(path,"w"))
                 print "Arquivo salvo com sucesso em ",path
