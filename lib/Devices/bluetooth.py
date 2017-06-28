@@ -1,8 +1,11 @@
 import math as mt
-from serial import Serial
 import time
-from threading import Thread
 import inspect
+from threading import Thread
+from ..Geometrics.Circle import circle as Circle
+from ..Geometrics.Points import point as Point
+from serial import Serial
+
 
 ########################################################################
 class ibeacon(object):
@@ -43,9 +46,11 @@ class bluetooth(Thread):
                 self.timeout = timeout
                 self.serialPort = Serial(port, baud, timeout=timeout)
                 self.searchmac = mac
-                self.resBeacon = None
-		self.x = -1
-		self.y = -1
+                self.resBeacon = ibeacon()
+		self.circle = None
+	def set_point(self, x, y,radius=1100):
+		""""""
+		self.circle = Circle(Point(x, y), radius)
         def connect(self):
                 if (self.serialPort.isOpen() == False):
                         self.serialPort.open()

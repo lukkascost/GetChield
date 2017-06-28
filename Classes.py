@@ -23,7 +23,7 @@ def load_archive(path,cast = None):
                 result_archive.append(objectLine)
         return result_archive        
         
-def distanceOfSignalPower(power,pd0=6.0,n=3.65):
-        exp = ((pd0+float(power))/(10*n))
+def distanceOfSignalPower(power,pd0=6.0,n=2.75):
+        exp = ((pd0-float(power))/(10*n))
         distance = mt.pow(10,exp)
         return float(distance/100)
