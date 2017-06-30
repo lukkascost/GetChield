@@ -1,5 +1,4 @@
 from ..Geometrics import Circle,Points
-import matplotlib.pyplot as plt
 import numpy as np
 import math as mt
 import pickle as pk
@@ -25,6 +24,7 @@ class trilateration_beacons(object):
                         returned += "Beacon {:02d}: {}\n".format(i+1,str(j))
                 return returned
         def toGraph(self,xlim=[-1100,1100],ylim=[-1100,1100]):
+                import matplotlib.pyplot as plt
                 fig, ax = plt.subplots()
                 for i,j in enumerate(self.beacons):
                         ax.scatter(j.center.x,j.center.y,label="Beacon {:02d}".format(i),edgecolors='none')
@@ -56,7 +56,12 @@ class trilateration_beacons(object):
                 for i,j in enumerate(self.beacons):
                         distances+= [Circle.circle(j.center,Points.get_two_points_distance(j.center, oPoint))]
                 return distances
-        
+        def trilaterate(self):
+                if self.nbeacons == 0: return -1
+                for i in beacons:
+                        pass
+                        
+                        
         
 class trilateration_distances(object):
         def __init__(self):

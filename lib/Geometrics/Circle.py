@@ -13,6 +13,13 @@ class circle(object):
                 return copy.copy(pk.load(open(path,"r")))        
         def __str__(self):
                 return "Center in {} and radius {:f}cm".format(str(self.center),self.radius)
+        def __eq__(self, other):
+                if not isinstance(other, self.__class__): return False
+                if self.center == other.center:
+                        if self.radius == other.radius:
+                                return True
+                        else: return False
+                else: return False
                 
                 
 def get_two_circles_intersecting_points(c1, c2):
