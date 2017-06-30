@@ -1,0 +1,943 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/pi/bin/node',
+1 verbose cli   '/home/pi/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'json-server' ]
+2 info using npm@1.2.11
+3 info using node@v0.8.21
+4 verbose read json /home/pi/GetChild/node_server/package.json
+5 warn package.json myapp@0.0.0 No README.md file found!
+6 verbose read json /home/pi/GetChild/node_server/node_modules/connect/package.json
+7 verbose read json /home/pi/GetChild/node_server/node_modules/express/package.json
+8 verbose from cache /home/pi/GetChild/node_server/package.json
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'json-server', null ]
+11 verbose cache add name=undefined spec="json-server" args=["json-server",null]
+12 verbose parsed url { pathname: 'json-server',
+12 verbose parsed url   path: 'json-server',
+12 verbose parsed url   href: 'json-server' }
+13 silly lockFile 9f215afd-json-server json-server
+14 verbose lock json-server /home/pi/.npm/9f215afd-json-server.lock
+15 silly lockFile 9f215afd-json-server json-server
+16 silly lockFile 9f215afd-json-server json-server
+17 verbose addNamed [ 'json-server', '' ]
+18 verbose addNamed [ null, '' ]
+19 silly lockFile 6624355a-json-server json-server@
+20 verbose lock json-server@ /home/pi/.npm/6624355a-json-server.lock
+21 silly addNameRange { name: 'json-server', range: '', hasData: false }
+22 verbose url raw json-server
+23 verbose url resolving [ 'https://registry.npmjs.org/', './json-server' ]
+24 verbose url resolved https://registry.npmjs.org/json-server
+25 info trying registry request attempt 1 at 16:36:00
+26 verbose etag "59543479-32605"
+27 http GET https://registry.npmjs.org/json-server
+28 http 304 https://registry.npmjs.org/json-server
+29 silly registry.get cb [ 304,
+29 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:17 GMT',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     'cache-control': 'max-age=300',
+29 silly registry.get     etag: '"59543479-32605"',
+29 silly registry.get     age: '0',
+29 silly registry.get     connection: 'keep-alive',
+29 silly registry.get     'x-served-by': 'cache-jfk8123-JFK',
+29 silly registry.get     'x-cache': 'MISS',
+29 silly registry.get     'x-cache-hits': '0',
+29 silly registry.get     'x-timer': 'S1498754177.084861,VS0,VE8',
+29 silly registry.get     vary: 'Accept-Encoding' } ]
+30 verbose etag json-server from cache
+31 silly addNameRange number 2 { name: 'json-server', range: '', hasData: true }
+32 silly addNameRange versions [ 'json-server',
+32 silly addNameRange   [ '0.0.0',
+32 silly addNameRange     '0.1.0',
+32 silly addNameRange     '0.1.1',
+32 silly addNameRange     '0.2.0',
+32 silly addNameRange     '0.3.0',
+32 silly addNameRange     '0.3.1',
+32 silly addNameRange     '0.3.2',
+32 silly addNameRange     '0.3.3',
+32 silly addNameRange     '0.3.4',
+32 silly addNameRange     '0.3.5',
+32 silly addNameRange     '0.3.6',
+32 silly addNameRange     '0.3.7',
+32 silly addNameRange     '0.3.8',
+32 silly addNameRange     '0.3.9',
+32 silly addNameRange     '0.3.10',
+32 silly addNameRange     '0.3.11',
+32 silly addNameRange     '0.4.0',
+32 silly addNameRange     '0.4.1',
+32 silly addNameRange     '0.4.2',
+32 silly addNameRange     '0.5.0',
+32 silly addNameRange     '0.5.1',
+32 silly addNameRange     '0.5.2',
+32 silly addNameRange     '0.5.4',
+32 silly addNameRange     '0.5.5',
+32 silly addNameRange     '0.5.6',
+32 silly addNameRange     '0.5.7',
+32 silly addNameRange     '0.5.8',
+32 silly addNameRange     '0.5.9',
+32 silly addNameRange     '0.5.10',
+32 silly addNameRange     '0.5.11',
+32 silly addNameRange     '0.5.12',
+32 silly addNameRange     '0.6.0',
+32 silly addNameRange     '0.6.1',
+32 silly addNameRange     '0.6.2',
+32 silly addNameRange     '0.6.3',
+32 silly addNameRange     '0.6.4',
+32 silly addNameRange     '0.6.5',
+32 silly addNameRange     '0.6.6',
+32 silly addNameRange     '0.6.7',
+32 silly addNameRange     '0.6.8',
+32 silly addNameRange     '0.6.9',
+32 silly addNameRange     '0.6.10',
+32 silly addNameRange     '0.7.0',
+32 silly addNameRange     '0.7.1',
+32 silly addNameRange     '0.7.2',
+32 silly addNameRange     '0.7.3',
+32 silly addNameRange     '0.7.4',
+32 silly addNameRange     '0.7.5',
+32 silly addNameRange     '0.7.6',
+32 silly addNameRange     '0.7.7',
+32 silly addNameRange     '0.7.8',
+32 silly addNameRange     '0.7.9',
+32 silly addNameRange     '0.7.10',
+32 silly addNameRange     '0.7.11',
+32 silly addNameRange     '0.7.12',
+32 silly addNameRange     '0.7.13',
+32 silly addNameRange     '0.7.14',
+32 silly addNameRange     '0.7.15',
+32 silly addNameRange     '0.7.16',
+32 silly addNameRange     '0.7.17',
+32 silly addNameRange     '0.7.18',
+32 silly addNameRange     '0.7.19',
+32 silly addNameRange     '0.7.20',
+32 silly addNameRange     '0.7.21',
+32 silly addNameRange     '0.7.23',
+32 silly addNameRange     '0.7.24',
+32 silly addNameRange     '0.7.25',
+32 silly addNameRange     '0.7.26',
+32 silly addNameRange     '0.7.27',
+32 silly addNameRange     '0.7.28',
+32 silly addNameRange     '0.8.0',
+32 silly addNameRange     '0.8.1',
+32 silly addNameRange     '0.8.2',
+32 silly addNameRange     '0.8.3',
+32 silly addNameRange     '0.8.4',
+32 silly addNameRange     '0.8.5',
+32 silly addNameRange     '0.8.6',
+32 silly addNameRange     '0.8.7',
+32 silly addNameRange     '0.8.8',
+32 silly addNameRange     '0.8.9',
+32 silly addNameRange     '0.8.10',
+32 silly addNameRange     '0.8.11',
+32 silly addNameRange     '0.8.12',
+32 silly addNameRange     '0.8.13',
+32 silly addNameRange     '0.8.14',
+32 silly addNameRange     '0.8.15',
+32 silly addNameRange     '0.8.16',
+32 silly addNameRange     '0.8.17',
+32 silly addNameRange     '0.8.18',
+32 silly addNameRange     '0.8.19',
+32 silly addNameRange     '0.8.20',
+32 silly addNameRange     '0.8.21',
+32 silly addNameRange     '0.8.22',
+32 silly addNameRange     '0.9.0-beta.1',
+32 silly addNameRange     '0.9.0-beta.2',
+32 silly addNameRange     '0.8.23',
+32 silly addNameRange     '0.9.0',
+32 silly addNameRange     '0.9.1',
+32 silly addNameRange     '0.9.2',
+32 silly addNameRange     '0.9.3',
+32 silly addNameRange     '0.9.4',
+32 silly addNameRange     '0.9.5',
+32 silly addNameRange     '0.9.6',
+32 silly addNameRange     '0.10.0',
+32 silly addNameRange     '0.10.1',
+32 silly addNameRange     '0.10.2',
+32 silly addNameRange     '0.10.3' ] ]
+33 verbose addNamed [ 'json-server', '0.10.3' ]
+34 verbose addNamed [ '0.10.3', '0.10.3' ]
+35 silly lockFile 19e72105-json-server-0-10-3 json-server@0.10.3
+36 verbose lock json-server@0.10.3 /home/pi/.npm/19e72105-json-server-0-10-3.lock
+37 verbose read json /home/pi/.npm/json-server/0.10.3/package/package.json
+38 silly lockFile 19e72105-json-server-0-10-3 json-server@0.10.3
+39 silly lockFile 19e72105-json-server-0-10-3 json-server@0.10.3
+40 silly lockFile 6624355a-json-server json-server@
+41 silly lockFile 6624355a-json-server json-server@
+42 silly resolved [ { name: 'json-server',
+42 silly resolved     version: '0.10.3',
+42 silly resolved     description: 'Serves JSON files through REST routes.',
+42 silly resolved     main: './lib/server/index.js',
+42 silly resolved     bin: { 'json-server': './bin/index.js' },
+42 silly resolved     directories: { test: 'test' },
+42 silly resolved     dependencies:
+42 silly resolved      { 'body-parser': '^1.15.2',
+42 silly resolved        chalk: '^1.1.3',
+42 silly resolved        compression: '^1.6.0',
+42 silly resolved        'connect-pause': '^0.1.0',
+42 silly resolved        cors: '^2.3.0',
+42 silly resolved        errorhandler: '^1.2.0',
+42 silly resolved        express: '^4.9.5',
+42 silly resolved        'json-parse-helpfulerror': '^1.0.3',
+42 silly resolved        lodash: '^4.11.2',
+42 silly resolved        'lodash-id': '^0.13.0',
+42 silly resolved        lowdb: '^0.15.0',
+42 silly resolved        'method-override': '^2.1.2',
+42 silly resolved        morgan: '^1.3.1',
+42 silly resolved        'object-assign': '^4.0.1',
+42 silly resolved        pluralize: '^3.0.0',
+42 silly resolved        request: '^2.72.0',
+42 silly resolved        'server-destroy': '^1.0.1',
+42 silly resolved        shortid: '^2.2.6',
+42 silly resolved        'update-notifier': '^1.0.2',
+42 silly resolved        yargs: '^6.0.0' },
+42 silly resolved     devDependencies:
+42 silly resolved      { 'babel-cli': '^6.24.0',
+42 silly resolved        'babel-preset-env': '^1.3.2',
+42 silly resolved        'babel-register': '^6.16.3',
+42 silly resolved        'cross-env': '^2.0.1',
+42 silly resolved        husky: '^0.14.1',
+42 silly resolved        'markdown-toc': '^0.13.0',
+42 silly resolved        mkdirp: '^0.5.1',
+42 silly resolved        mocha: '^3.2.0',
+42 silly resolved        'os-tmpdir': '^1.0.1',
+42 silly resolved        'pkg-ok': '^1.0.1',
+42 silly resolved        rimraf: '^2.5.2',
+42 silly resolved        'server-ready': '^0.3.1',
+42 silly resolved        standard: '^8.3.0',
+42 silly resolved        supertest: '^3.0.0',
+42 silly resolved        'temp-write': '^2.1.0' },
+42 silly resolved     scripts:
+42 silly resolved      { test: 'npm run test:cli && npm run test:server && standard',
+42 silly resolved        'test:cli': 'npm run build && cross-env NODE_ENV=test mocha test/cli/*.js',
+42 silly resolved        'test:server': 'cross-env NODE_ENV=test mocha test/server/*.js',
+42 silly resolved        start: 'babel-node src/cli/bin',
+42 silly resolved        precommit: 'npm test',
+42 silly resolved        build: 'babel src -d lib --copy-files',
+42 silly resolved        toc: 'markdown-toc -i README.md',
+42 silly resolved        prepublishOnly: 'npm run build && pkg-ok' },
+42 silly resolved     repository:
+42 silly resolved      { type: 'git',
+42 silly resolved        url: 'git://github.com/typicode/json-server.git' },
+42 silly resolved     keywords:
+42 silly resolved      [ 'JSON',
+42 silly resolved        'server',
+42 silly resolved        'fake',
+42 silly resolved        'REST',
+42 silly resolved        'API',
+42 silly resolved        'prototyping',
+42 silly resolved        'mock',
+42 silly resolved        'mocking',
+42 silly resolved        'test',
+42 silly resolved        'testing',
+42 silly resolved        'rest',
+42 silly resolved        'data',
+42 silly resolved        'dummy',
+42 silly resolved        'sandbox' ],
+42 silly resolved     author: { name: 'Typicode', email: 'typicode@gmail.com' },
+42 silly resolved     license: 'MIT',
+42 silly resolved     bugs: { url: 'https://github.com/typicode/json-server/issues' },
+42 silly resolved     homepage: 'https://github.com/typicode/json-server',
+42 silly resolved     standard: { fix: true, env: [Object] },
+42 silly resolved     engines: { node: '>= 4' },
+42 silly resolved     readme: '# JSON Server [![](https://travis-ci.org/typicode/json-server.svg?branch=master)](https://travis-ci.org/typicode/json-server) [![](https://badge.fury.io/js/json-server.svg)](http://badge.fury.io/js/json-server) [![](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/typicode/json-server?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\nGet a full fake REST API with __zero coding__ in __less than 30 seconds__ (seriously)\n\nCreated with <3 for front-end developers who need a quick back-end for prototyping and mocking.\n\n* [Egghead.io free video tutorial - Creating demo APIs with json-server](https://egghead.io/lessons/nodejs-creating-demo-apis-with-json-server)\n* [JSONPlaceholder - Live running version](http://jsonplaceholder.typicode.com)\n\nSee also:\n* :dog: [husky - Git hooks made easy](https://github.com/typicode/husky)\n* :camera: [tlapse - Create a timelapse of your web development](https://github.com/typicode/tlapse)\n* :hotel: [hotel - Process manager for developers with local .dev domain out of the box](https://github.com/typicode/hotel)\n\n## Table of contents\n\n<details>\n\n<!-- toc -->\n\n- [Example](#example)\n- [Install](#install)\n- [Routes](#routes)\n  * [Plural routes](#plural-routes)\n  * [Singular routes](#singular-routes)\n  * [Filter](#filter)\n  * [Paginate](#paginate)\n  * [Sort](#sort)\n  * [Slice](#slice)\n  * [Operators](#operators)\n  * [Full-text search](#full-text-search)\n  * [Relationships](#relationships)\n  * [Database](#database)\n  * [Homepage](#homepage)\n- [Extras](#extras)\n  * [Static file server](#static-file-server)\n  * [Alternative port](#alternative-port)\n  * [Access from anywhere](#access-from-anywhere)\n  * [Remote schema](#remote-schema)\n  * [Generate random data](#generate-random-data)\n  * [HTTPS](#https)\n  * [Add custom routes](#add-custom-routes)\n  * [Add middlewares](#add-middlewares)\n  * [CLI usage](#cli-usage)\n  * [Module](#module)\n    + [Simple example](#simple-example)\n    + [Custom routes example](#custom-routes-example)\n    + [Access control example](#access-control-example)\n    + [Custom output example](#custom-output-example)\n    + [Rewriter example](#rewriter-example)\n    + [Mounting JSON Server on another endpoint example](#mounting-json-server-on-another-endpoint-example)\n  * [Deployment](#deployment)\n- [Links](#links)\n  * [Video](#video)\n  * [Articles](#articles)\n  * [Third-party tools](#third-party-tools)\n- [License](#license)\n\n<!-- tocstop -->\n\n</details>\n\n## Example\n\nCreate a `db.json` file\n\n```json\n{\n  "posts": [\n    { "id": 1, "title": "json-server", "author": "typicode" }\n  ],\n  "comments": [\n    { "id": 1, "body": "some comment", "postId": 1 }\n  ],\n  "profile": { "name": "typicode" }\n}\n```\n\nStart JSON Server\n\n```bash\n$ json-server --watch db.json\n```\n\nNow if you go to [http://localhost:3000/posts/1](), you\'ll get\n\n```json\n{ "id": 1, "title": "json-server", "author": "typicode" }\n```\n\nAlso when doing requests, it\'s good to know that:\n\n- If you make POST, PUT, PATCH or DELETE requests, changes will be automatically and safely saved to `db.json` using [lowdb](https://github.com/typicode/lowdb).\n- Your request body JSON should be object enclosed, just like the GET output. (for example `{"name": "Foobar"}`)\n- Id values are not mutable. Any `id` value in the body of your PUT or PATCH request wil be ignored. Only a value set in a POST request wil be respected, but only if not already taken.\n- A POST, PUT or PATCH request should include a `Content-Type: application/json` header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.\n\n## Install\n\n```bash\n$ npm install -g json-server\n```\n\n## Routes\n\nBased on the previous `db.json` file, here are all the default routes. You can also add [other routes](#add-custom-routes) using `--routes`.\n\n### Plural routes\n\n```\nGET    /posts\nGET    /posts/1\nPOST   /posts\nPUT    /posts/1\nPATCH  /posts/1\nDELETE /posts/1\n```\n\n### Singular routes\n\n```\nGET    /profile\nPOST   /profile\nPUT    /profile\nPATCH  /profile\n```\n\n### Filter\n\nUse `.` to access deep properties\n\n```\nGET /posts?title=json-server&author=typicode\nGET /posts?id=1&id=2\nGET /comments?author.name=typicode\n```\n\n### Paginate\n\nUse `_page` and optionally `_limit` to paginate returned data.\n\nIn the `Link` header you\'ll get `first`, `prev`, `next` and `last` links.\n\n\n```\nGET /posts?_page=7\nGET /posts?_page=7&_limit=20\n```\n\n_10 items are returned by default_\n\n### Sort\n\nAdd `_sort` and `_order` (ascending order by default)\n\n```\nGET /posts?_sort=views&_order=asc\nGET /posts/1/comments?_sort=votes&_order=asc\n```\n\nFor multiple fields, use the following format:\n\n```\nGET /posts?_sort=user,views&_order=desc,asc\n```\n\n### Slice\n\nAdd `_start` and `_end` or `_limit` (an `X-Total-Count` header is included in the response)\n\n```\nGET /posts?_start=20&_end=30\nGET /posts/1/comments?_start=20&_end=30\nGET /posts/1/comments?_start=20&_limit=10\n```\n\n_Works exactly as [Array.slice](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) (i.e. `_start` is inclusive and `_end` exclusive)_\n\n### Operators\n\nAdd `_gte` or `_lte` for getting a range\n\n```\nGET /posts?views_gte=10&views_lte=20\n```\n\nAdd `_ne` to exclude a value\n\n```\nGET /posts?id_ne=1\n```\n\nAdd `_like` to filter (RegExp supported)\n\n```\nGET /posts?title_like=server\n```\n\n### Full-text search\n\nAdd `q`\n\n```\nGET /posts?q=internet\n```\n\n### Relationships\n\nTo include children resources, add `_embed`\n\n```\nGET /posts?_embed=comments\nGET /posts/1?_embed=comments\n```\n\nTo include parent resource, add `_expand`\n\n```\nGET /comments?_expand=post\nGET /comments/1?_expand=post\n```\n\nTo get or create nested resources (by default one level, [add custom routes](#add-custom-routes) for more)\n\n```\nGET  /posts/1/comments\nPOST /posts/1/comments\n```\n\n### Database\n\n```\nGET /db\n```\n\n### Homepage\n\nReturns default index file or serves `./public` directory\n\n```\nGET /\n```\n\n## Extras\n\n### Static file server\n\nYou can use JSON Server to serve your HTML, JS and CSS, simply create a `./public` directory\nor use `--static` to set a different static files directory.\n\n```bash\nmkdir public\necho \'hello world\' > public/index.html\njson-server db.json\n```\n\n```bash\njson-server db.json --static ./some-other-dir\n```\n\n### Alternative port\n\nYou can start JSON Server on other ports with the `--port` flag:\n\n```bash\n$ json-server --watch db.json --port 3004\n```\n\n### Access from anywhere\n\nYou can access your fake API from anywhere using CORS and JSONP.\n\n### Remote schema\n\nYou can load remote schemas.\n\n```bash\n$ json-server http://example.com/file.json\n$ json-server http://jsonplaceholder.typicode.com/db\n```\n\n### Generate random data\n\nUsing JS instead of a JSON file, you can create data programmatically.\n\n```javascript\n// index.js\nmodule.exports = () => {\n  const data = { users: [] }\n  // Create 1000 users\n  for (let i = 0; i < 1000; i++) {\n    data.users.push({ id: i, name: `user${i}` })\n  }\n  return data\n}\n```\n\n```bash\n$ json-server index.js\n```\n\n__Tip__ use modules like [Faker](https://github.com/Marak/faker.js), [Casual](https://github.com/boo1ean/casual), [Chance](https://github.com/victorquinn/chancejs) or [JSON Schema Faker](https://github.com/json-schema-faker/json-schema-faker).\n\n### HTTPS\n\nThere\'s many way to set up SSL in development. One simple way though is to use [hotel](https://github.com/typicode/hotel).\n\n### Add custom routes\n\nCreate a `routes.json` file. Pay attention to start every route with `/`.\n\n```json\n{\n  "/api/": "/",\n  "/blog/:resource/:id/show": "/:resource/:id",\n  "/blog/:category": "/posts?category=:category"\n}\n```\n\nStart JSON Server with `--routes` option.\n\n```bash\njson-server db.json --routes routes.json\n```\n\nNow you can access resources using additional routes.\n\n```sh\n/api/posts # → /posts\n/api/posts/1  # → /posts/1\n/blog/posts/1/show # → /posts/1\n/blog/javascript # → /posts?category=javascript\n```\n\n### Add middlewares\n\nYou can add your middlewares from the CLI using `--middlewares` option:\n\n```js\n// hello.js\nmodule.exports = (req, res, next) => {\n  res.header(\'X-Hello\', \'World\')\n  next()\n}\n```\n\n```bash\njson-server db.json --middlewares ./hello.js\njson-server db.json --middlewares ./first.js ./second.js\n```\n\n### CLI usage\n\n```\njson-server [options] <source>\n\nOptions:\n  --config, -c       Path to config file           [default: "json-server.json"]\n  --port, -p         Set port                                    [default: 3000]\n  --host, -H         Set host                               [default: "0.0.0.0"]\n  --watch, -w        Watch file(s)                                     [boolean]\n  --routes, -r       Path to routes file\n  --middlewares, -m  Paths to middleware files                           [array]\n  --static, -s       Set static files directory\n  --read-only, --ro  Allow only GET requests                           [boolean]\n  --no-cors, --nc    Disable Cross-Origin Resource Sharing             [boolean]\n  --no-gzip, --ng    Disable GZIP Content-Encoding                     [boolean]\n  --snapshots, -S    Set snapshots directory                      [default: "."]\n  --delay, -d        Add delay to responses (ms)\n  --id, -i           Set database id property (e.g. _id)         [default: "id"]\n  --foreignKeySuffix, --fks  Set foreign key suffix, (e.g. _id as in post_id)\n                                                                 [default: "Id"]\n  --quiet, -q        Suppress log messages from output                 [boolean]\n  --help, -h         Show help                                         [boolean]\n  --version, -v      Show version number                               [boolean]\n\nExamples:\n  json-server db.json\n  json-server file.js\n  json-server http://example.com/db.json\n\nhttps://github.com/typicode/json-server\n```\n\nYou can also set options in a `json-server.json` configuration file.\n\n```json\n{\n  "port": 3000\n}\n```\n\n### Module\n\nIf you need to add authentication, validation, or __any behavior__, you can use the project as a module in combination with other Express middlewares.\n\n#### Simple example\n\n```sh\n$ npm install json-server --save-dev\n```\n\n```js\n// server.js\nconst jsonServer = require(\'json-server\')\nconst server = jsonServer.create()\nconst router = jsonServer.router(\'db.json\')\nconst middlewares = jsonServer.defaults()\n\nserver.use(middlewares)\nserver.use(router)\nserver.listen(3000, () => {\n  console.log(\'JSON Server is running\')\n})\n```\n\n```sh\n$ node server.js\n```\n\nThe path you provide to the `jsonServer.router` function  is relative to the directory from where you launch your node process. If you run the above code from another directory, it’s better to use an absolute path:\n\n```js\nconst path = require(\'path\')\nconst router = jsonServer.router(path.join(__dirname, \'db.json\'))\n```\n\nFor an in-memory database, simply pass an object to `jsonServer.router()`.\n\nPlease note also that `jsonServer.router()` can be used in existing Express projects.\n\n#### Custom routes example\n\nLet\'s say you want a route that echoes query parameters and another one that set a timestamp on every resource created.\n\n```js\nconst jsonServer = require(\'json-server\')\nconst server = jsonServer.create()\nconst router = jsonServer.router(\'db.json\')\nconst middlewares = jsonServer.defaults()\n\n// Set default middlewares (logger, static, cors and no-cache)\nserver.use(middlewares)\n\n// Add custom routes before JSON Server router\nserver.get(\'/echo\', (req, res) => {\n  res.jsonp(req.query)\n})\n\n// To handle POST, PUT and PATCH you need to use a body-parser\n// You can use the one used by JSON Server\nserver.use(jsonServer.bodyParser)\nserver.use((req, res, next) => {\n  if (req.method === \'POST\') {\n    req.body.createdAt = Date.now()\n  }\n  // Continue to JSON Server router\n  next()\n})\n\n// Use default router\nserver.use(router)\nserver.listen(3000, () => {\n  console.log(\'JSON Server is running\')\n})\n```\n\n#### Access control example\n\n```js\nconst jsonServer = require(\'json-server\')\nconst server = jsonServer.create()\nconst router = jsonServer.router(\'db.json\')\nconst middlewares = jsonServer.defaults()\n\nserver.use(middlewares)\nserver.use((req, res, next) => {\n if (isAuthorized(req)) { // add your authorization logic here\n   next() // continue to JSON Server router\n } else {\n   res.sendStatus(401)\n }\n})\nserver.use(router)\nserver.listen(3000, () => {\n  console.log(\'JSON Server is running\')\n})\n```\n\n#### Custom output example\n\nTo modify responses, overwrite `router.render` method:\n\n```javascript\n// In this example, returned resources will be wrapped in a body property\nrouter.render = (req, res) => {\n  res.jsonp({\n    body: res.locals.data\n  })\n}\n```\n\n#### Rewriter example\n\nTo add rewrite rules, use `jsonServer.rewriter()`:\n\n```javascript\n// Add this before server.use(router)\nserver.use(jsonServer.rewriter({\n  \'/api/\': \'/\',\n  \'/blog/:resource/:id/show\': \'/:resource/:id\'\n}))\n```\n\n#### Mounting JSON Server on another endpoint example\n\nAlternatively, you can also mount the router on `/api`.\n\n```javascript\nserver.use(\'/api\', router)\n```\n\n### Deployment\n\nYou can deploy JSON Server. For example, [JSONPlaceholder](http://jsonplaceholder.typicode.com) is an online fake API powered by JSON Server and running on Heroku.\n\n## Links\n\n### Video\n\n* [Creating Demo APIs with json-server on egghead.io](https://egghead.io/lessons/nodejs-creating-demo-apis-with-json-server)\n\n### Articles\n\n* [Node Module Of The Week - json-server](http://nmotw.in/json-server/)\n* [Mock up your REST API with JSON Server](http://www.betterpixels.co.uk/projects/2015/05/09/mock-up-your-rest-api-with-json-server/)\n* [ng-admin: Add an AngularJS admin GUI to any RESTful API](http://marmelab.com/blog/2014/09/15/easy-backend-for-your-restful-api.html)\n* [Fast prototyping using Restangular and Json-server](http://glebbahmutov.com/blog/fast-prototyping-using-restangular-and-json-server/)\n* [Create a Mock REST API in Seconds for Prototyping your Frontend](https://coligo.io/create-mock-rest-api-with-json-server/)\n* [No API? No Problem! Rapid Development via Mock APIs](https://medium.com/@housecor/rapid-development-via-mock-apis-e559087be066#.93d7w8oro)\n\n### Third-party tools\n\n* [Grunt JSON Server](https://github.com/tfiwm/grunt-json-server)\n* [Docker JSON Server](https://github.com/clue/docker-json-server)\n* [JSON Server GUI](https://github.com/naholyr/json-server-gui)\n* [JSON file generator](https://github.com/dfsq/json-server-init)\n* [JSON Server extension](https://github.com/maty21/json-server-extension)\n\n## License\n\nMIT - [Typicode](https://github.com/typicode) - [Patreon](https://www.patreon.com/typicode)\n',
+42 silly resolved     readmeFilename: 'README.md',
+42 silly resolved     _id: 'json-server@0.10.3',
+42 silly resolved     _from: 'json-server@' } ]
+43 info install json-server@0.10.3 into /home/pi/GetChild/node_server
+44 info installOne json-server@0.10.3
+45 warn engine json-server@0.10.3: wanted: {"node":">= 4"} (current: {"node":"v0.8.21","npm":"1.2.11"})
+46 verbose from cache /home/pi/.npm/json-server/0.10.3/package/package.json
+47 info /home/pi/GetChild/node_server/node_modules/json-server unbuild
+48 verbose read json /home/pi/GetChild/node_server/node_modules/json-server/package.json
+49 verbose tar unpack /home/pi/.npm/json-server/0.10.3/package.tgz
+50 silly lockFile ce8bacc4--server-node-modules-json-server /home/pi/GetChild/node_server/node_modules/json-server
+51 verbose lock /home/pi/GetChild/node_server/node_modules/json-server /home/pi/.npm/ce8bacc4--server-node-modules-json-server.lock
+52 silly lockFile 23790c39-m-json-server-0-10-3-package-tgz /home/pi/.npm/json-server/0.10.3/package.tgz
+53 verbose lock /home/pi/.npm/json-server/0.10.3/package.tgz /home/pi/.npm/23790c39-m-json-server-0-10-3-package-tgz.lock
+54 silly gunzTarPerm modes [ '755', '644' ]
+55 silly gunzTarPerm extractEntry package.json
+56 silly gunzTarPerm extractEntry .npmignore
+57 silly gunzTarPerm extractEntry README.md
+58 silly gunzTarPerm extractEntry LICENSE
+59 silly gunzTarPerm extractEntry .babelrc
+60 silly gunzTarPerm extractEntry appveyor.yml
+61 silly gunzTarPerm extractEntry db.json
+62 silly gunzTarPerm extractEntry lib/cli/bin.js
+63 silly gunzTarPerm extractEntry lib/cli/index.js
+64 silly gunzTarPerm extractEntry lib/cli/run.js
+65 silly gunzTarPerm extractEntry lib/cli/utils/load.js
+66 silly gunzTarPerm extractEntry lib/cli/utils/is.js
+67 silly gunzTarPerm extractEntry lib/cli/example.json
+68 silly gunzTarPerm extractEntry lib/server/body-parser.js
+69 silly gunzTarPerm extractEntry lib/server/mixins.js
+70 silly gunzTarPerm extractEntry lib/server/index.js
+71 silly gunzTarPerm extractEntry lib/server/rewriter.js
+72 silly gunzTarPerm extractEntry lib/server/utils.js
+73 silly gunzTarPerm extractEntry lib/server/defaults.js
+74 silly gunzTarPerm extractEntry lib/server/router/get-full-url.js
+75 silly gunzTarPerm extractEntry lib/server/router/singular.js
+76 silly gunzTarPerm extractEntry lib/server/router/write.js
+77 silly gunzTarPerm extractEntry lib/server/router/index.js
+78 silly gunzTarPerm extractEntry lib/server/router/nested.js
+79 silly gunzTarPerm extractEntry lib/server/router/plural.js
+80 silly gunzTarPerm extractEntry lib/server/router/validate-data.js
+81 silly gunzTarPerm extractEntry lib/server/public/main.js
+82 silly gunzTarPerm extractEntry lib/server/public/index.html
+83 silly gunzTarPerm extractEntry lib/server/public/favicon.ico
+84 silly gunzTarPerm extractEntry lib/server/public/images/json.png
+85 silly gunzTarPerm extractEntry lib/server/public/style.css
+86 silly gunzTarPerm extractEntry routes.json
+87 silly gunzTarPerm extractEntry .travis.yml
+88 silly gunzTarPerm extractEntry bin/index.js
+89 silly gunzTarPerm extractEntry CHANGELOG.md
+90 verbose read json /home/pi/GetChild/node_server/node_modules/json-server/package.json
+91 silly lockFile ce8bacc4--server-node-modules-json-server /home/pi/GetChild/node_server/node_modules/json-server
+92 silly lockFile ce8bacc4--server-node-modules-json-server /home/pi/GetChild/node_server/node_modules/json-server
+93 silly lockFile 23790c39-m-json-server-0-10-3-package-tgz /home/pi/.npm/json-server/0.10.3/package.tgz
+94 silly lockFile 23790c39-m-json-server-0-10-3-package-tgz /home/pi/.npm/json-server/0.10.3/package.tgz
+95 info preinstall json-server@0.10.3
+96 verbose from cache /home/pi/GetChild/node_server/node_modules/json-server/package.json
+97 verbose readDependencies using package.json deps
+98 verbose from cache /home/pi/GetChild/node_server/node_modules/json-server/package.json
+99 verbose readDependencies using package.json deps
+100 verbose cache add [ 'body-parser@^1.15.2', null ]
+101 verbose cache add name=undefined spec="body-parser@^1.15.2" args=["body-parser@^1.15.2",null]
+102 verbose parsed url { pathname: 'body-parser@^1.15.2',
+102 verbose parsed url   path: 'body-parser@^1.15.2',
+102 verbose parsed url   href: 'body-parser@^1.15.2' }
+103 verbose cache add name="body-parser" spec="^1.15.2" args=["body-parser","^1.15.2"]
+104 verbose parsed url { pathname: '^1.15.2', path: '^1.15.2', href: '^1.15.2' }
+105 verbose addNamed [ 'body-parser', '^1.15.2' ]
+106 verbose addNamed [ null, null ]
+107 silly lockFile 55565485-body-parser-1-15-2 body-parser@^1.15.2
+108 verbose lock body-parser@^1.15.2 /home/pi/.npm/55565485-body-parser-1-15-2.lock
+109 verbose cache add [ 'chalk@^1.1.3', null ]
+110 verbose cache add name=undefined spec="chalk@^1.1.3" args=["chalk@^1.1.3",null]
+111 verbose parsed url { pathname: 'chalk@^1.1.3',
+111 verbose parsed url   path: 'chalk@^1.1.3',
+111 verbose parsed url   href: 'chalk@^1.1.3' }
+112 verbose cache add name="chalk" spec="^1.1.3" args=["chalk","^1.1.3"]
+113 verbose parsed url { pathname: '^1.1.3', path: '^1.1.3', href: '^1.1.3' }
+114 verbose addNamed [ 'chalk', '^1.1.3' ]
+115 verbose addNamed [ null, null ]
+116 silly lockFile d6387928-chalk-1-1-3 chalk@^1.1.3
+117 verbose lock chalk@^1.1.3 /home/pi/.npm/d6387928-chalk-1-1-3.lock
+118 verbose cache add [ 'compression@^1.6.0', null ]
+119 verbose cache add name=undefined spec="compression@^1.6.0" args=["compression@^1.6.0",null]
+120 verbose parsed url { pathname: 'compression@^1.6.0',
+120 verbose parsed url   path: 'compression@^1.6.0',
+120 verbose parsed url   href: 'compression@^1.6.0' }
+121 verbose cache add name="compression" spec="^1.6.0" args=["compression","^1.6.0"]
+122 verbose parsed url { pathname: '^1.6.0', path: '^1.6.0', href: '^1.6.0' }
+123 verbose addNamed [ 'compression', '^1.6.0' ]
+124 verbose addNamed [ null, null ]
+125 silly lockFile 4a1ca26c-compression-1-6-0 compression@^1.6.0
+126 verbose lock compression@^1.6.0 /home/pi/.npm/4a1ca26c-compression-1-6-0.lock
+127 info addNameTag [ 'body-parser', '^1.15.2' ]
+128 info addNameTag [ 'chalk', '^1.1.3' ]
+129 info addNameTag [ 'compression', '^1.6.0' ]
+130 verbose url raw chalk
+131 verbose url resolving [ 'https://registry.npmjs.org/', './chalk' ]
+132 verbose url resolved https://registry.npmjs.org/chalk
+133 info trying registry request attempt 1 at 16:36:17
+134 verbose etag "5951c07d-8c12"
+135 http GET https://registry.npmjs.org/chalk
+136 verbose url raw compression
+137 verbose url resolving [ 'https://registry.npmjs.org/', './compression' ]
+138 verbose url resolved https://registry.npmjs.org/compression
+139 info trying registry request attempt 1 at 16:36:17
+140 verbose etag "59538eae-1017a"
+141 http GET https://registry.npmjs.org/compression
+142 verbose cache add [ 'connect-pause@^0.1.0', null ]
+143 verbose cache add name=undefined spec="connect-pause@^0.1.0" args=["connect-pause@^0.1.0",null]
+144 verbose parsed url { pathname: 'connect-pause@^0.1.0',
+144 verbose parsed url   path: 'connect-pause@^0.1.0',
+144 verbose parsed url   href: 'connect-pause@^0.1.0' }
+145 verbose cache add name="connect-pause" spec="^0.1.0" args=["connect-pause","^0.1.0"]
+146 verbose parsed url { pathname: '^0.1.0', path: '^0.1.0', href: '^0.1.0' }
+147 verbose addNamed [ 'connect-pause', '^0.1.0' ]
+148 verbose addNamed [ null, null ]
+149 silly lockFile 5821f22f-connect-pause-0-1-0 connect-pause@^0.1.0
+150 verbose lock connect-pause@^0.1.0 /home/pi/.npm/5821f22f-connect-pause-0-1-0.lock
+151 verbose cache add [ 'cors@^2.3.0', null ]
+152 verbose cache add name=undefined spec="cors@^2.3.0" args=["cors@^2.3.0",null]
+153 verbose parsed url { pathname: 'cors@^2.3.0',
+153 verbose parsed url   path: 'cors@^2.3.0',
+153 verbose parsed url   href: 'cors@^2.3.0' }
+154 verbose cache add name="cors" spec="^2.3.0" args=["cors","^2.3.0"]
+155 verbose parsed url { pathname: '^2.3.0', path: '^2.3.0', href: '^2.3.0' }
+156 verbose addNamed [ 'cors', '^2.3.0' ]
+157 verbose addNamed [ null, null ]
+158 silly lockFile 0d637a75-cors-2-3-0 cors@^2.3.0
+159 verbose lock cors@^2.3.0 /home/pi/.npm/0d637a75-cors-2-3-0.lock
+160 verbose cache add [ 'errorhandler@^1.2.0', null ]
+161 verbose cache add name=undefined spec="errorhandler@^1.2.0" args=["errorhandler@^1.2.0",null]
+162 verbose parsed url { pathname: 'errorhandler@^1.2.0',
+162 verbose parsed url   path: 'errorhandler@^1.2.0',
+162 verbose parsed url   href: 'errorhandler@^1.2.0' }
+163 verbose cache add name="errorhandler" spec="^1.2.0" args=["errorhandler","^1.2.0"]
+164 verbose parsed url { pathname: '^1.2.0', path: '^1.2.0', href: '^1.2.0' }
+165 verbose addNamed [ 'errorhandler', '^1.2.0' ]
+166 verbose addNamed [ null, null ]
+167 silly lockFile 282535ae-errorhandler-1-2-0 errorhandler@^1.2.0
+168 verbose lock errorhandler@^1.2.0 /home/pi/.npm/282535ae-errorhandler-1-2-0.lock
+169 verbose cache add [ 'express@^4.9.5', null ]
+170 verbose cache add name=undefined spec="express@^4.9.5" args=["express@^4.9.5",null]
+171 verbose parsed url { pathname: 'express@^4.9.5',
+171 verbose parsed url   path: 'express@^4.9.5',
+171 verbose parsed url   href: 'express@^4.9.5' }
+172 verbose cache add name="express" spec="^4.9.5" args=["express","^4.9.5"]
+173 verbose parsed url { pathname: '^4.9.5', path: '^4.9.5', href: '^4.9.5' }
+174 verbose addNamed [ 'express', '^4.9.5' ]
+175 verbose addNamed [ null, null ]
+176 silly lockFile fded4574-express-4-9-5 express@^4.9.5
+177 verbose lock express@^4.9.5 /home/pi/.npm/fded4574-express-4-9-5.lock
+178 verbose cache add [ 'json-parse-helpfulerror@^1.0.3', null ]
+179 verbose cache add name=undefined spec="json-parse-helpfulerror@^1.0.3" args=["json-parse-helpfulerror@^1.0.3",null]
+180 verbose parsed url { pathname: 'json-parse-helpfulerror@^1.0.3',
+180 verbose parsed url   path: 'json-parse-helpfulerror@^1.0.3',
+180 verbose parsed url   href: 'json-parse-helpfulerror@^1.0.3' }
+181 verbose cache add name="json-parse-helpfulerror" spec="^1.0.3" args=["json-parse-helpfulerror","^1.0.3"]
+182 verbose parsed url { pathname: '^1.0.3', path: '^1.0.3', href: '^1.0.3' }
+183 verbose addNamed [ 'json-parse-helpfulerror', '^1.0.3' ]
+184 verbose addNamed [ null, null ]
+185 silly lockFile adf42373-json-parse-helpfulerror-1-0-3 json-parse-helpfulerror@^1.0.3
+186 verbose lock json-parse-helpfulerror@^1.0.3 /home/pi/.npm/adf42373-json-parse-helpfulerror-1-0-3.lock
+187 verbose cache add [ 'lodash@^4.11.2', null ]
+188 verbose cache add name=undefined spec="lodash@^4.11.2" args=["lodash@^4.11.2",null]
+189 verbose parsed url { pathname: 'lodash@^4.11.2',
+189 verbose parsed url   path: 'lodash@^4.11.2',
+189 verbose parsed url   href: 'lodash@^4.11.2' }
+190 verbose cache add name="lodash" spec="^4.11.2" args=["lodash","^4.11.2"]
+191 verbose parsed url { pathname: '^4.11.2', path: '^4.11.2', href: '^4.11.2' }
+192 verbose addNamed [ 'lodash', '^4.11.2' ]
+193 verbose addNamed [ null, null ]
+194 silly lockFile ca93000a-lodash-4-11-2 lodash@^4.11.2
+195 verbose lock lodash@^4.11.2 /home/pi/.npm/ca93000a-lodash-4-11-2.lock
+196 verbose cache add [ 'lodash-id@^0.13.0', null ]
+197 verbose cache add name=undefined spec="lodash-id@^0.13.0" args=["lodash-id@^0.13.0",null]
+198 verbose parsed url { pathname: 'lodash-id@^0.13.0',
+198 verbose parsed url   path: 'lodash-id@^0.13.0',
+198 verbose parsed url   href: 'lodash-id@^0.13.0' }
+199 verbose cache add name="lodash-id" spec="^0.13.0" args=["lodash-id","^0.13.0"]
+200 verbose parsed url { pathname: '^0.13.0', path: '^0.13.0', href: '^0.13.0' }
+201 verbose addNamed [ 'lodash-id', '^0.13.0' ]
+202 verbose addNamed [ null, null ]
+203 silly lockFile c1bfa116-lodash-id-0-13-0 lodash-id@^0.13.0
+204 verbose lock lodash-id@^0.13.0 /home/pi/.npm/c1bfa116-lodash-id-0-13-0.lock
+205 verbose cache add [ 'lowdb@^0.15.0', null ]
+206 verbose cache add name=undefined spec="lowdb@^0.15.0" args=["lowdb@^0.15.0",null]
+207 verbose parsed url { pathname: 'lowdb@^0.15.0',
+207 verbose parsed url   path: 'lowdb@^0.15.0',
+207 verbose parsed url   href: 'lowdb@^0.15.0' }
+208 verbose cache add name="lowdb" spec="^0.15.0" args=["lowdb","^0.15.0"]
+209 verbose parsed url { pathname: '^0.15.0', path: '^0.15.0', href: '^0.15.0' }
+210 verbose addNamed [ 'lowdb', '^0.15.0' ]
+211 verbose addNamed [ null, null ]
+212 silly lockFile 16995faa-lowdb-0-15-0 lowdb@^0.15.0
+213 verbose lock lowdb@^0.15.0 /home/pi/.npm/16995faa-lowdb-0-15-0.lock
+214 verbose cache add [ 'method-override@^2.1.2', null ]
+215 verbose cache add name=undefined spec="method-override@^2.1.2" args=["method-override@^2.1.2",null]
+216 verbose parsed url { pathname: 'method-override@^2.1.2',
+216 verbose parsed url   path: 'method-override@^2.1.2',
+216 verbose parsed url   href: 'method-override@^2.1.2' }
+217 verbose cache add name="method-override" spec="^2.1.2" args=["method-override","^2.1.2"]
+218 verbose parsed url { pathname: '^2.1.2', path: '^2.1.2', href: '^2.1.2' }
+219 verbose addNamed [ 'method-override', '^2.1.2' ]
+220 verbose addNamed [ null, null ]
+221 silly lockFile 803f1434-method-override-2-1-2 method-override@^2.1.2
+222 verbose lock method-override@^2.1.2 /home/pi/.npm/803f1434-method-override-2-1-2.lock
+223 verbose cache add [ 'morgan@^1.3.1', null ]
+224 verbose cache add name=undefined spec="morgan@^1.3.1" args=["morgan@^1.3.1",null]
+225 verbose parsed url { pathname: 'morgan@^1.3.1',
+225 verbose parsed url   path: 'morgan@^1.3.1',
+225 verbose parsed url   href: 'morgan@^1.3.1' }
+226 verbose cache add name="morgan" spec="^1.3.1" args=["morgan","^1.3.1"]
+227 verbose parsed url { pathname: '^1.3.1', path: '^1.3.1', href: '^1.3.1' }
+228 verbose addNamed [ 'morgan', '^1.3.1' ]
+229 verbose addNamed [ null, null ]
+230 silly lockFile d164eb03-morgan-1-3-1 morgan@^1.3.1
+231 verbose lock morgan@^1.3.1 /home/pi/.npm/d164eb03-morgan-1-3-1.lock
+232 verbose cache add [ 'object-assign@^4.0.1', null ]
+233 verbose cache add name=undefined spec="object-assign@^4.0.1" args=["object-assign@^4.0.1",null]
+234 verbose parsed url { pathname: 'object-assign@^4.0.1',
+234 verbose parsed url   path: 'object-assign@^4.0.1',
+234 verbose parsed url   href: 'object-assign@^4.0.1' }
+235 verbose cache add name="object-assign" spec="^4.0.1" args=["object-assign","^4.0.1"]
+236 verbose parsed url { pathname: '^4.0.1', path: '^4.0.1', href: '^4.0.1' }
+237 verbose addNamed [ 'object-assign', '^4.0.1' ]
+238 verbose addNamed [ null, null ]
+239 silly lockFile 07ecbd72-object-assign-4-0-1 object-assign@^4.0.1
+240 verbose lock object-assign@^4.0.1 /home/pi/.npm/07ecbd72-object-assign-4-0-1.lock
+241 verbose cache add [ 'pluralize@^3.0.0', null ]
+242 verbose cache add name=undefined spec="pluralize@^3.0.0" args=["pluralize@^3.0.0",null]
+243 verbose parsed url { pathname: 'pluralize@^3.0.0',
+243 verbose parsed url   path: 'pluralize@^3.0.0',
+243 verbose parsed url   href: 'pluralize@^3.0.0' }
+244 verbose cache add name="pluralize" spec="^3.0.0" args=["pluralize","^3.0.0"]
+245 verbose parsed url { pathname: '^3.0.0', path: '^3.0.0', href: '^3.0.0' }
+246 verbose addNamed [ 'pluralize', '^3.0.0' ]
+247 verbose addNamed [ null, null ]
+248 silly lockFile 6bdbcb7e-pluralize-3-0-0 pluralize@^3.0.0
+249 verbose lock pluralize@^3.0.0 /home/pi/.npm/6bdbcb7e-pluralize-3-0-0.lock
+250 verbose cache add [ 'request@^2.72.0', null ]
+251 verbose cache add name=undefined spec="request@^2.72.0" args=["request@^2.72.0",null]
+252 verbose parsed url { pathname: 'request@^2.72.0',
+252 verbose parsed url   path: 'request@^2.72.0',
+252 verbose parsed url   href: 'request@^2.72.0' }
+253 verbose cache add name="request" spec="^2.72.0" args=["request","^2.72.0"]
+254 verbose parsed url { pathname: '^2.72.0', path: '^2.72.0', href: '^2.72.0' }
+255 verbose addNamed [ 'request', '^2.72.0' ]
+256 verbose addNamed [ null, null ]
+257 silly lockFile b8c2c467-request-2-72-0 request@^2.72.0
+258 verbose lock request@^2.72.0 /home/pi/.npm/b8c2c467-request-2-72-0.lock
+259 verbose cache add [ 'server-destroy@^1.0.1', null ]
+260 verbose cache add name=undefined spec="server-destroy@^1.0.1" args=["server-destroy@^1.0.1",null]
+261 verbose parsed url { pathname: 'server-destroy@^1.0.1',
+261 verbose parsed url   path: 'server-destroy@^1.0.1',
+261 verbose parsed url   href: 'server-destroy@^1.0.1' }
+262 verbose cache add name="server-destroy" spec="^1.0.1" args=["server-destroy","^1.0.1"]
+263 verbose parsed url { pathname: '^1.0.1', path: '^1.0.1', href: '^1.0.1' }
+264 verbose addNamed [ 'server-destroy', '^1.0.1' ]
+265 verbose addNamed [ null, null ]
+266 silly lockFile 81607527-server-destroy-1-0-1 server-destroy@^1.0.1
+267 verbose lock server-destroy@^1.0.1 /home/pi/.npm/81607527-server-destroy-1-0-1.lock
+268 verbose cache add [ 'shortid@^2.2.6', null ]
+269 verbose cache add name=undefined spec="shortid@^2.2.6" args=["shortid@^2.2.6",null]
+270 verbose parsed url { pathname: 'shortid@^2.2.6',
+270 verbose parsed url   path: 'shortid@^2.2.6',
+270 verbose parsed url   href: 'shortid@^2.2.6' }
+271 verbose cache add name="shortid" spec="^2.2.6" args=["shortid","^2.2.6"]
+272 verbose parsed url { pathname: '^2.2.6', path: '^2.2.6', href: '^2.2.6' }
+273 verbose addNamed [ 'shortid', '^2.2.6' ]
+274 verbose addNamed [ null, null ]
+275 silly lockFile 5581abb5-shortid-2-2-6 shortid@^2.2.6
+276 verbose lock shortid@^2.2.6 /home/pi/.npm/5581abb5-shortid-2-2-6.lock
+277 verbose cache add [ 'update-notifier@^1.0.2', null ]
+278 verbose cache add name=undefined spec="update-notifier@^1.0.2" args=["update-notifier@^1.0.2",null]
+279 verbose parsed url { pathname: 'update-notifier@^1.0.2',
+279 verbose parsed url   path: 'update-notifier@^1.0.2',
+279 verbose parsed url   href: 'update-notifier@^1.0.2' }
+280 verbose cache add name="update-notifier" spec="^1.0.2" args=["update-notifier","^1.0.2"]
+281 verbose parsed url { pathname: '^1.0.2', path: '^1.0.2', href: '^1.0.2' }
+282 verbose addNamed [ 'update-notifier', '^1.0.2' ]
+283 verbose addNamed [ null, null ]
+284 silly lockFile 9119bc80-update-notifier-1-0-2 update-notifier@^1.0.2
+285 verbose lock update-notifier@^1.0.2 /home/pi/.npm/9119bc80-update-notifier-1-0-2.lock
+286 verbose cache add [ 'yargs@^6.0.0', null ]
+287 verbose cache add name=undefined spec="yargs@^6.0.0" args=["yargs@^6.0.0",null]
+288 verbose parsed url { pathname: 'yargs@^6.0.0',
+288 verbose parsed url   path: 'yargs@^6.0.0',
+288 verbose parsed url   href: 'yargs@^6.0.0' }
+289 verbose cache add name="yargs" spec="^6.0.0" args=["yargs","^6.0.0"]
+290 verbose parsed url { pathname: '^6.0.0', path: '^6.0.0', href: '^6.0.0' }
+291 verbose addNamed [ 'yargs', '^6.0.0' ]
+292 verbose addNamed [ null, null ]
+293 silly lockFile 26ebf125-yargs-6-0-0 yargs@^6.0.0
+294 verbose lock yargs@^6.0.0 /home/pi/.npm/26ebf125-yargs-6-0-0.lock
+295 verbose url raw body-parser
+296 verbose url resolving [ 'https://registry.npmjs.org/', './body-parser' ]
+297 verbose url resolved https://registry.npmjs.org/body-parser
+298 info trying registry request attempt 1 at 16:36:17
+299 verbose etag "59532f90-20f3b"
+300 http GET https://registry.npmjs.org/body-parser
+301 info addNameTag [ 'connect-pause', '^0.1.0' ]
+302 info addNameTag [ 'cors', '^2.3.0' ]
+303 info addNameTag [ 'errorhandler', '^1.2.0' ]
+304 info addNameTag [ 'express', '^4.9.5' ]
+305 info addNameTag [ 'json-parse-helpfulerror', '^1.0.3' ]
+306 info addNameTag [ 'lodash', '^4.11.2' ]
+307 info addNameTag [ 'lodash-id', '^0.13.0' ]
+308 info addNameTag [ 'lowdb', '^0.15.0' ]
+309 info addNameTag [ 'method-override', '^2.1.2' ]
+310 info addNameTag [ 'morgan', '^1.3.1' ]
+311 info addNameTag [ 'object-assign', '^4.0.1' ]
+312 info addNameTag [ 'pluralize', '^3.0.0' ]
+313 info addNameTag [ 'request', '^2.72.0' ]
+314 info addNameTag [ 'server-destroy', '^1.0.1' ]
+315 info addNameTag [ 'shortid', '^2.2.6' ]
+316 info addNameTag [ 'update-notifier', '^1.0.2' ]
+317 info addNameTag [ 'yargs', '^6.0.0' ]
+318 verbose url raw connect-pause
+319 verbose url resolving [ 'https://registry.npmjs.org/', './connect-pause' ]
+320 verbose url resolved https://registry.npmjs.org/connect-pause
+321 info trying registry request attempt 1 at 16:36:17
+322 verbose etag "519d22a8-2739"
+323 http GET https://registry.npmjs.org/connect-pause
+324 verbose url raw cors
+325 verbose url resolving [ 'https://registry.npmjs.org/', './cors' ]
+326 verbose url resolved https://registry.npmjs.org/cors
+327 info trying registry request attempt 1 at 16:36:17
+328 verbose etag "595407ea-e405"
+329 http GET https://registry.npmjs.org/cors
+330 verbose url raw errorhandler
+331 verbose url resolving [ 'https://registry.npmjs.org/', './errorhandler' ]
+332 verbose url resolved https://registry.npmjs.org/errorhandler
+333 info trying registry request attempt 1 at 16:36:17
+334 verbose etag "594590e8-a9b8"
+335 http GET https://registry.npmjs.org/errorhandler
+336 verbose url raw json-parse-helpfulerror
+337 verbose url resolving [ 'https://registry.npmjs.org/', './json-parse-helpfulerror' ]
+338 verbose url resolved https://registry.npmjs.org/json-parse-helpfulerror
+339 info trying registry request attempt 1 at 16:36:17
+340 verbose etag "5918a3d6-145a"
+341 http GET https://registry.npmjs.org/json-parse-helpfulerror
+342 verbose url raw express
+343 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+344 verbose url resolved https://registry.npmjs.org/express
+345 info trying registry request attempt 1 at 16:36:17
+346 verbose etag "595459f3-8d03c"
+347 http GET https://registry.npmjs.org/express
+348 verbose url raw lodash-id
+349 verbose url resolving [ 'https://registry.npmjs.org/', './lodash-id' ]
+350 verbose url resolved https://registry.npmjs.org/lodash-id
+351 info trying registry request attempt 1 at 16:36:17
+352 verbose etag "58c86dd2-1d90"
+353 http GET https://registry.npmjs.org/lodash-id
+354 verbose url raw lowdb
+355 verbose url resolving [ 'https://registry.npmjs.org/', './lowdb' ]
+356 verbose url resolved https://registry.npmjs.org/lowdb
+357 info trying registry request attempt 1 at 16:36:17
+358 verbose etag "59540f7f-17ac6"
+359 http GET https://registry.npmjs.org/lowdb
+360 verbose url raw method-override
+361 verbose url resolving [ 'https://registry.npmjs.org/', './method-override' ]
+362 verbose url resolved https://registry.npmjs.org/method-override
+363 info trying registry request attempt 1 at 16:36:17
+364 verbose etag "59312912-b177"
+365 http GET https://registry.npmjs.org/method-override
+366 verbose url raw morgan
+367 verbose url resolving [ 'https://registry.npmjs.org/', './morgan' ]
+368 verbose url resolved https://registry.npmjs.org/morgan
+369 info trying registry request attempt 1 at 16:36:17
+370 verbose etag "594d43cb-d905"
+371 http GET https://registry.npmjs.org/morgan
+372 verbose url raw object-assign
+373 verbose url resolving [ 'https://registry.npmjs.org/', './object-assign' ]
+374 verbose url resolved https://registry.npmjs.org/object-assign
+375 info trying registry request attempt 1 at 16:36:17
+376 verbose etag "5942fe06-5d5c"
+377 http GET https://registry.npmjs.org/object-assign
+378 verbose url raw pluralize
+379 verbose url resolving [ 'https://registry.npmjs.org/', './pluralize' ]
+380 verbose url resolved https://registry.npmjs.org/pluralize
+381 info trying registry request attempt 1 at 16:36:17
+382 verbose etag "591b004e-9465"
+383 http GET https://registry.npmjs.org/pluralize
+384 verbose url raw request
+385 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+386 verbose url resolved https://registry.npmjs.org/request
+387 info trying registry request attempt 1 at 16:36:17
+388 verbose etag "595417c9-377dd"
+389 http GET https://registry.npmjs.org/request
+390 verbose url raw server-destroy
+391 verbose url resolving [ 'https://registry.npmjs.org/', './server-destroy' ]
+392 verbose url resolved https://registry.npmjs.org/server-destroy
+393 info trying registry request attempt 1 at 16:36:17
+394 verbose etag "555c34d9-b4c"
+395 http GET https://registry.npmjs.org/server-destroy
+396 verbose url raw shortid
+397 verbose url resolving [ 'https://registry.npmjs.org/', './shortid' ]
+398 verbose url resolved https://registry.npmjs.org/shortid
+399 info trying registry request attempt 1 at 16:36:17
+400 verbose etag "595363f1-aefa"
+401 http GET https://registry.npmjs.org/shortid
+402 verbose url raw update-notifier
+403 verbose url resolving [ 'https://registry.npmjs.org/', './update-notifier' ]
+404 verbose url resolved https://registry.npmjs.org/update-notifier
+405 info trying registry request attempt 1 at 16:36:17
+406 verbose etag "59405e9d-e027"
+407 http GET https://registry.npmjs.org/update-notifier
+408 verbose url raw yargs
+409 verbose url resolving [ 'https://registry.npmjs.org/', './yargs' ]
+410 verbose url resolved https://registry.npmjs.org/yargs
+411 info trying registry request attempt 1 at 16:36:17
+412 verbose etag "5952a1a1-4246b"
+413 http GET https://registry.npmjs.org/yargs
+414 verbose url raw lodash
+415 verbose url resolving [ 'https://registry.npmjs.org/', './lodash' ]
+416 verbose url resolved https://registry.npmjs.org/lodash
+417 info trying registry request attempt 1 at 16:36:17
+418 verbose etag "5953429e-296ea"
+419 http GET https://registry.npmjs.org/lodash
+420 http 304 https://registry.npmjs.org/body-parser
+421 silly registry.get cb [ 304,
+421 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:23 GMT',
+421 silly registry.get     via: '1.1 varnish',
+421 silly registry.get     'cache-control': 'max-age=300',
+421 silly registry.get     etag: '"59532f90-20f3b"',
+421 silly registry.get     age: '108',
+421 silly registry.get     connection: 'keep-alive',
+421 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+421 silly registry.get     'x-cache': 'HIT',
+421 silly registry.get     'x-cache-hits': '1',
+421 silly registry.get     'x-timer': 'S1498754183.496205,VS0,VE1',
+421 silly registry.get     vary: 'Accept-Encoding' } ]
+422 verbose etag body-parser from cache
+423 http 304 https://registry.npmjs.org/errorhandler
+424 silly registry.get cb [ 304,
+424 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:23 GMT',
+424 silly registry.get     via: '1.1 varnish',
+424 silly registry.get     'cache-control': 'max-age=300',
+424 silly registry.get     etag: '"594590e8-a9b8"',
+424 silly registry.get     age: '0',
+424 silly registry.get     connection: 'keep-alive',
+424 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+424 silly registry.get     'x-cache': 'HIT',
+424 silly registry.get     'x-cache-hits': '1',
+424 silly registry.get     'x-timer': 'S1498754184.655803,VS0,VE68',
+424 silly registry.get     vary: 'Accept-Encoding' } ]
+425 verbose etag errorhandler from cache
+426 http 304 https://registry.npmjs.org/json-parse-helpfulerror
+427 silly registry.get cb [ 304,
+427 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:23 GMT',
+427 silly registry.get     via: '1.1 varnish',
+427 silly registry.get     'cache-control': 'max-age=300',
+427 silly registry.get     etag: '"5918a3d6-145a"',
+427 silly registry.get     age: '0',
+427 silly registry.get     connection: 'keep-alive',
+427 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+427 silly registry.get     'x-cache': 'MISS',
+427 silly registry.get     'x-cache-hits': '0',
+427 silly registry.get     'x-timer': 'S1498754184.900903,VS0,VE8',
+427 silly registry.get     vary: 'Accept-Encoding' } ]
+428 verbose etag json-parse-helpfulerror from cache
+429 http 304 https://registry.npmjs.org/express
+430 silly registry.get cb [ 304,
+430 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:24 GMT',
+430 silly registry.get     via: '1.1 varnish',
+430 silly registry.get     'cache-control': 'max-age=300',
+430 silly registry.get     etag: '"595459f3-8d03c"',
+430 silly registry.get     age: '0',
+430 silly registry.get     connection: 'keep-alive',
+430 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+430 silly registry.get     'x-cache': 'HIT',
+430 silly registry.get     'x-cache-hits': '1',
+430 silly registry.get     'x-timer': 'S1498754184.104443,VS0,VE9',
+430 silly registry.get     vary: 'Accept-Encoding' } ]
+431 verbose etag express from cache
+432 http 304 https://registry.npmjs.org/lodash-id
+433 silly registry.get cb [ 304,
+433 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:24 GMT',
+433 silly registry.get     via: '1.1 varnish',
+433 silly registry.get     'cache-control': 'max-age=300',
+433 silly registry.get     etag: '"58c86dd2-1d90"',
+433 silly registry.get     age: '0',
+433 silly registry.get     connection: 'keep-alive',
+433 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+433 silly registry.get     'x-cache': 'MISS',
+433 silly registry.get     'x-cache-hits': '0',
+433 silly registry.get     'x-timer': 'S1498754184.394615,VS0,VE65',
+433 silly registry.get     vary: 'Accept-Encoding' } ]
+434 verbose etag lodash-id from cache
+435 http 304 https://registry.npmjs.org/lowdb
+436 silly registry.get cb [ 304,
+436 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:24 GMT',
+436 silly registry.get     via: '1.1 varnish',
+436 silly registry.get     'cache-control': 'max-age=300',
+436 silly registry.get     etag: '"59540f7f-17ac6"',
+436 silly registry.get     age: '0',
+436 silly registry.get     connection: 'keep-alive',
+436 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+436 silly registry.get     'x-cache': 'MISS',
+436 silly registry.get     'x-cache-hits': '0',
+436 silly registry.get     'x-timer': 'S1498754185.596832,VS0,VE32',
+436 silly registry.get     vary: 'Accept-Encoding' } ]
+437 verbose etag lowdb from cache
+438 http 304 https://registry.npmjs.org/method-override
+439 silly registry.get cb [ 304,
+439 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:24 GMT',
+439 silly registry.get     via: '1.1 varnish',
+439 silly registry.get     'cache-control': 'max-age=300',
+439 silly registry.get     etag: '"59312912-b177"',
+439 silly registry.get     age: '0',
+439 silly registry.get     connection: 'keep-alive',
+439 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+439 silly registry.get     'x-cache': 'HIT',
+439 silly registry.get     'x-cache-hits': '1',
+439 silly registry.get     'x-timer': 'S1498754185.771872,VS0,VE232',
+439 silly registry.get     vary: 'Accept-Encoding' } ]
+440 verbose etag method-override from cache
+441 http 304 https://registry.npmjs.org/morgan
+442 silly registry.get cb [ 304,
+442 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:25 GMT',
+442 silly registry.get     via: '1.1 varnish',
+442 silly registry.get     'cache-control': 'max-age=300',
+442 silly registry.get     etag: '"594d43cb-d905"',
+442 silly registry.get     age: '0',
+442 silly registry.get     connection: 'keep-alive',
+442 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+442 silly registry.get     'x-cache': 'HIT',
+442 silly registry.get     'x-cache-hits': '1',
+442 silly registry.get     'x-timer': 'S1498754185.233586,VS0,VE7',
+442 silly registry.get     vary: 'Accept-Encoding' } ]
+443 verbose etag morgan from cache
+444 http 304 https://registry.npmjs.org/object-assign
+445 silly registry.get cb [ 304,
+445 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:25 GMT',
+445 silly registry.get     via: '1.1 varnish',
+445 silly registry.get     'cache-control': 'max-age=300',
+445 silly registry.get     etag: '"5942fe06-5d5c"',
+445 silly registry.get     age: '12',
+445 silly registry.get     connection: 'keep-alive',
+445 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+445 silly registry.get     'x-cache': 'HIT',
+445 silly registry.get     'x-cache-hits': '1',
+445 silly registry.get     'x-timer': 'S1498754185.399902,VS0,VE1',
+445 silly registry.get     vary: 'Accept-Encoding' } ]
+446 verbose etag object-assign from cache
+447 http 304 https://registry.npmjs.org/pluralize
+448 silly registry.get cb [ 304,
+448 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:25 GMT',
+448 silly registry.get     via: '1.1 varnish',
+448 silly registry.get     'cache-control': 'max-age=300',
+448 silly registry.get     etag: '"591b004e-9465"',
+448 silly registry.get     age: '242',
+448 silly registry.get     connection: 'keep-alive',
+448 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+448 silly registry.get     'x-cache': 'HIT',
+448 silly registry.get     'x-cache-hits': '2',
+448 silly registry.get     'x-timer': 'S1498754186.526052,VS0,VE0',
+448 silly registry.get     vary: 'Accept-Encoding' } ]
+449 verbose etag pluralize from cache
+450 http 304 https://registry.npmjs.org/request
+451 silly registry.get cb [ 304,
+451 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:25 GMT',
+451 silly registry.get     via: '1.1 varnish',
+451 silly registry.get     'cache-control': 'max-age=300',
+451 silly registry.get     etag: '"595417c9-377dd"',
+451 silly registry.get     age: '10',
+451 silly registry.get     connection: 'keep-alive',
+451 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+451 silly registry.get     'x-cache': 'HIT',
+451 silly registry.get     'x-cache-hits': '1',
+451 silly registry.get     'x-timer': 'S1498754186.735439,VS0,VE1',
+451 silly registry.get     vary: 'Accept-Encoding' } ]
+452 verbose etag request from cache
+453 http 304 https://registry.npmjs.org/server-destroy
+454 silly registry.get cb [ 304,
+454 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:26 GMT',
+454 silly registry.get     via: '1.1 varnish',
+454 silly registry.get     'cache-control': 'max-age=300',
+454 silly registry.get     etag: '"555c34d9-b4c"',
+454 silly registry.get     age: '132',
+454 silly registry.get     connection: 'keep-alive',
+454 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+454 silly registry.get     'x-cache': 'HIT',
+454 silly registry.get     'x-cache-hits': '1',
+454 silly registry.get     'x-timer': 'S1498754186.341290,VS0,VE0',
+454 silly registry.get     vary: 'Accept-Encoding' } ]
+455 verbose etag server-destroy from cache
+456 http 304 https://registry.npmjs.org/shortid
+457 silly registry.get cb [ 304,
+457 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:27 GMT',
+457 silly registry.get     via: '1.1 varnish',
+457 silly registry.get     'cache-control': 'max-age=300',
+457 silly registry.get     etag: '"595363f1-aefa"',
+457 silly registry.get     age: '0',
+457 silly registry.get     connection: 'keep-alive',
+457 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+457 silly registry.get     'x-cache': 'MISS',
+457 silly registry.get     'x-cache-hits': '0',
+457 silly registry.get     'x-timer': 'S1498754187.098209,VS0,VE8',
+457 silly registry.get     vary: 'Accept-Encoding' } ]
+458 verbose etag shortid from cache
+459 http 304 https://registry.npmjs.org/update-notifier
+460 silly registry.get cb [ 304,
+460 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:27 GMT',
+460 silly registry.get     via: '1.1 varnish',
+460 silly registry.get     'cache-control': 'max-age=300',
+460 silly registry.get     etag: '"59405e9d-e027"',
+460 silly registry.get     age: '265',
+460 silly registry.get     connection: 'keep-alive',
+460 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+460 silly registry.get     'x-cache': 'HIT',
+460 silly registry.get     'x-cache-hits': '1',
+460 silly registry.get     'x-timer': 'S1498754187.328339,VS0,VE1',
+460 silly registry.get     vary: 'Accept-Encoding' } ]
+461 verbose etag update-notifier from cache
+462 http 304 https://registry.npmjs.org/yargs
+463 silly registry.get cb [ 304,
+463 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:27 GMT',
+463 silly registry.get     via: '1.1 varnish',
+463 silly registry.get     'cache-control': 'max-age=300',
+463 silly registry.get     etag: '"5952a1a1-4246b"',
+463 silly registry.get     age: '1',
+463 silly registry.get     connection: 'keep-alive',
+463 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+463 silly registry.get     'x-cache': 'HIT',
+463 silly registry.get     'x-cache-hits': '1',
+463 silly registry.get     'x-timer': 'S1498754188.503943,VS0,VE1',
+463 silly registry.get     vary: 'Accept-Encoding' } ]
+464 verbose etag yargs from cache
+465 http 304 https://registry.npmjs.org/lodash
+466 silly registry.get cb [ 304,
+466 silly registry.get   { date: 'Thu, 29 Jun 2017 16:36:27 GMT',
+466 silly registry.get     via: '1.1 varnish',
+466 silly registry.get     'cache-control': 'max-age=300',
+466 silly registry.get     etag: '"5953429e-296ea"',
+466 silly registry.get     age: '51',
+466 silly registry.get     connection: 'keep-alive',
+466 silly registry.get     'x-served-by': 'cache-jfk8129-JFK',
+466 silly registry.get     'x-cache': 'HIT',
+466 silly registry.get     'x-cache-hits': '1',
+466 silly registry.get     'x-timer': 'S1498754188.698568,VS0,VE1',
+466 silly registry.get     vary: 'Accept-Encoding' } ]
+467 verbose etag lodash from cache
+468 silly lockFile 55565485-body-parser-1-15-2 body-parser@^1.15.2
+469 silly lockFile 55565485-body-parser-1-15-2 body-parser@^1.15.2
+470 silly lockFile 282535ae-errorhandler-1-2-0 errorhandler@^1.2.0
+471 silly lockFile 282535ae-errorhandler-1-2-0 errorhandler@^1.2.0
+472 silly lockFile adf42373-json-parse-helpfulerror-1-0-3 json-parse-helpfulerror@^1.0.3
+473 silly lockFile adf42373-json-parse-helpfulerror-1-0-3 json-parse-helpfulerror@^1.0.3
+474 silly lockFile fded4574-express-4-9-5 express@^4.9.5
+475 silly lockFile fded4574-express-4-9-5 express@^4.9.5
+476 silly lockFile c1bfa116-lodash-id-0-13-0 lodash-id@^0.13.0
+477 silly lockFile c1bfa116-lodash-id-0-13-0 lodash-id@^0.13.0
+478 silly lockFile 16995faa-lowdb-0-15-0 lowdb@^0.15.0
+479 silly lockFile 16995faa-lowdb-0-15-0 lowdb@^0.15.0
+480 silly lockFile 803f1434-method-override-2-1-2 method-override@^2.1.2
+481 silly lockFile 803f1434-method-override-2-1-2 method-override@^2.1.2
+482 silly lockFile d164eb03-morgan-1-3-1 morgan@^1.3.1
+483 silly lockFile d164eb03-morgan-1-3-1 morgan@^1.3.1
+484 silly lockFile 07ecbd72-object-assign-4-0-1 object-assign@^4.0.1
+485 silly lockFile 07ecbd72-object-assign-4-0-1 object-assign@^4.0.1
+486 silly lockFile 6bdbcb7e-pluralize-3-0-0 pluralize@^3.0.0
+487 silly lockFile 6bdbcb7e-pluralize-3-0-0 pluralize@^3.0.0
+488 silly lockFile b8c2c467-request-2-72-0 request@^2.72.0
+489 silly lockFile b8c2c467-request-2-72-0 request@^2.72.0
+490 silly lockFile 81607527-server-destroy-1-0-1 server-destroy@^1.0.1
+491 silly lockFile 81607527-server-destroy-1-0-1 server-destroy@^1.0.1
+492 silly lockFile 5581abb5-shortid-2-2-6 shortid@^2.2.6
+493 silly lockFile 5581abb5-shortid-2-2-6 shortid@^2.2.6
+494 silly lockFile 9119bc80-update-notifier-1-0-2 update-notifier@^1.0.2
+495 silly lockFile 9119bc80-update-notifier-1-0-2 update-notifier@^1.0.2
+496 silly lockFile 26ebf125-yargs-6-0-0 yargs@^6.0.0
+497 silly lockFile 26ebf125-yargs-6-0-0 yargs@^6.0.0
+498 verbose about to build /home/pi/GetChild/node_server/node_modules/json-server
+499 info /home/pi/GetChild/node_server/node_modules/json-server unbuild
+500 verbose from cache /home/pi/GetChild/node_server/node_modules/json-server/package.json
+501 info preuninstall json-server@0.10.3
+502 silly lockFile ca93000a-lodash-4-11-2 lodash@^4.11.2
+503 silly lockFile ca93000a-lodash-4-11-2 lodash@^4.11.2
+504 info uninstall json-server@0.10.3
+505 verbose true,/home/pi/GetChild/node_server/node_modules,/home/pi/GetChild/node_server/node_modules unbuild json-server@0.10.3
+506 verbose /home/pi/GetChild/node_server/node_modules/.bin,[object Object] binRoot
+507 info postuninstall json-server@0.10.3
+508 error Error: No compatible version found: body-parser@'^1.15.2'
+508 error Valid install targets:
+508 error ["1.0.0","1.0.1","1.0.2","1.1.0","1.1.1","1.1.2","1.2.0","1.2.1","1.2.2","1.3.0","1.3.1","1.4.0","1.4.1","1.4.2","1.4.3","1.5.0","1.5.1","1.5.2","1.6.0","1.6.1","1.6.2","1.6.3","1.6.4","1.6.5","1.6.6","1.6.7","1.7.0","1.8.0","1.8.1","1.8.2","1.8.3","1.8.4","1.9.0","1.9.1","1.9.2","1.9.3","1.10.0","1.10.1","1.10.2","1.11.0","1.12.0","1.12.1","1.12.2","1.12.3","1.12.4","1.13.0","1.13.1","1.13.2","1.13.3","1.14.0","1.14.1","1.14.2","1.15.0","1.15.1","1.15.2","1.16.0","1.16.1","1.17.0","1.17.1","1.17.2"]
+508 error     at installTargetsError (/home/pi/lib/node_modules/npm/lib/cache.js:679:10)
+508 error     at /home/pi/lib/node_modules/npm/lib/cache.js:594:10
+508 error     at saved (/home/pi/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:138:7)
+508 error     at Object.oncomplete (fs.js:297:15)
+509 error If you need help, you may report this log at:
+509 error     <http://github.com/isaacs/npm/issues>
+509 error or email it to:
+509 error     <npm-@googlegroups.com>
+510 error System Linux 4.4.50-v7+
+511 error command "/home/pi/bin/node" "/home/pi/bin/npm" "install" "json-server"
+512 error cwd /home/pi/GetChild/node_server
+513 error node -v v0.8.21
+514 error npm -v 1.2.11
+515 verbose exit [ 1, true ]

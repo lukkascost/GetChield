@@ -17,11 +17,11 @@ bl3 = bluetooth.bluetooth("/dev/ttyUSB1","544A1638145E")
 bl3.start()
 print name
 if name.find("BLE3")!=-1:
-	bl2.set_point(11.5,-20.0)
-	bl3.set_point(-11.5,-20.0)
+	bl2.set_point(12.5,-21.8)
+	bl3.set_point(-12.5,-21.8)
 elif name.find("BLE1")!=-1:
-	bl2.set_point(-11.5,-20.0)
-	bl3.set_point(11.5,-20.0)
+	bl2.set_point(-12.5,-21.8)
+	bl3.set_point(12.5,-21.8)
 else: 
 	exit()
 
@@ -57,8 +57,9 @@ while True:
 			elif (radian >247.5 and radian<=292.5):
 				string = "TRAS"#SUL
 			elif (radian >292.5 and radian<=337.5):
-				string = "ESQ"#SUDESTE
+				string = "DIR"#SUDESTE
 			print radian,cont,string
+			
 	#pontos.append((str(anterior),string,radian))
 	#print pontos
 	#print "beacon 1 rssi:{}\tbeacon 2 rssi: {}\t beacon 3 rssi: {}".format(bl1.resBeacon.rssi,bl2.resBeacon.rssi,bl3.resBeacon.rssi)
