@@ -4,7 +4,7 @@ import collections as cl
 valors = np.zeros((11,999))
 archives = [100,200,300,400,500,600,700,800,900,1000,1100]
 for h,i in enumerate(archives):
-        arquivo = open("Samples/Measurements/One_To_One/Suspend_-23dbm/{:04d}cm.txt".format((i)))
+        arquivo = open("Samples/Measurements/One_To_One/Suspend_6dbm/{:04d}cm.txt".format((i)))
         #print "Samples/Measurements/One_To_One/Suspend/{:04d}cm.txt".format((i))
         for j,k in enumerate(arquivo):
                 if j == 999: break
@@ -22,9 +22,19 @@ for h in range(11):
         
 x  = [c for c in range(1,101)]
 
+for i,j in enumerate(toPlot):
+        Stri = "OCORRENCIAS EM {:02d}m: \t".format(i+1)
+        stri2 = "QUANTIDADE EM {:02d}m: \t".format(i+1)
+        for k,l in enumerate(j):
+                if l!= 0:
+                        Stri+="{:03d}\t".format(-k)
+                        stri2+="{:03d}\t".format(int(l))
+        print Stri
+        print stri2
+        
+        
 rank = 5
-
-for i in range(2):
+for i in range(11):
         temp = np.argpartition(-toPlot[i], rank)
         result_args = temp[:rank]        
         plt.plot(x,toPlot[i],label = "RSSI MODA {:02d}m".format(i+1))

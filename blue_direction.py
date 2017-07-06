@@ -29,7 +29,7 @@ print c2
 print c3
 print "c1 com c2"
 pontos = []
-pontos.append(get_two_circles_intersecting_points(c1, c2))
+pontos.append(get_two_circles_intersecting_points(c1,c2))
 pontos.append(get_two_circles_intersecting_points(c1,c3))                       
 pontos.append(get_two_circles_intersecting_points(c2,c3))   
 print pontos
@@ -37,5 +37,7 @@ otrila = trilateration_beacons()
 otrila.append(c1)
 otrila.append(c2)
 otrila.append(c3)
+
+
 #otrila.toGraph(xlim=[-100, 100], ylim=[-100, 100])
 lero =1 
