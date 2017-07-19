@@ -21,16 +21,24 @@ for h in range(11):
                 toPlot[h,j] = modas[h][j+1]
         
 x  = [c for c in range(1,101)]
-
+valors = []
 for i,j in enumerate(toPlot):
+        media = 0
         Stri = "OCORRENCIAS EM {:02d}m: \t".format(i+1)
         stri2 = "QUANTIDADE EM {:02d}m: \t".format(i+1)
         for k,l in enumerate(j):
                 if l!= 0:
                         Stri+="{:03d}\t".format(-k)
                         stri2+="{:03d}\t".format(int(l))
+                        media += (-k)*l
         print Stri
         print stri2
+        valors.append(media/1200)
+for i,j in enumerate(valors):
+        print "{:03.04f}".format(j)
+print valors
+
+
         
         
 rank = 5
