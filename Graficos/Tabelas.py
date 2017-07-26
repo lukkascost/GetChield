@@ -83,6 +83,7 @@ while(x>-100):
         distances[abs(x)] = controle
         x-=1
 rmse = []
+print distances
 for k in range(10):
         distancias1m = []
         for i in valors[k]:

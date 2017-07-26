@@ -1,4 +1,4 @@
-from lib.Circle import *
+from lib.Geometrics.Circle import *
 import numpy as np
 import matplotlib.pyplot as plt
 beacons  = [[0,0,1000],[10,-10,1000],[-10,-10,1000]]
