@@ -1,6 +1,6 @@
 from datetime import datetime
 
-date = datetime(17,01,30, 11,50,01)
+date = datetime(2017,01,30, 11,50,01)
 d1  = 10
 d2  = 2
 d3  = 11
@@ -8,12 +8,15 @@ angulo = 290
 
 print date
 
-year = date.year
+year = date.year/100
+year = year*100
+year = date.year - year
+print year
 
 
 day =       "{0:05b}".format(date.day)
 month =     "{0:04b}".format(date.month)
-year =      "{0:07b}".format(date.year)
+year =      "{0:07b}".format(year)
 hour =      "{0:05b}".format(date.hour)
 minute =    "{0:06b}".format(date.minute)
 distance1 = "{0:04b}".format(d1)
