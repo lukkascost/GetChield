@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import sys 
 import os
 sys.path.append(os.path.abspath(".."))
@@ -36,7 +36,7 @@ erroMedio = 0
 quantidade = 0
 resultados = np.zeros(100)
 for j,i in enumerate(data.data):
-        fig, ax = plt.subplots()
+        #fig, ax = plt.subplots()
         c1 = circle(point(data.locate1, 0), distanceOfSignalPower(i[0])*100)
         c2 = circle(point(data.locate2, -43.3), distanceOfSignalPower(i[1])*100)
         c3 = circle(point(data.locate3, -43.3), distanceOfSignalPower(i[2])*100)
@@ -75,5 +75,6 @@ for j,i in enumerate(data.data):
         otrila = trilateration_beacons()
         otrila.append(c1)
         otrila.append(c2)
-        otrila.append(c3)        
-print resultados
+        otrila.append(c3)
+        print resultados
+        if resultados[j] == 90: otrila.toGraph()

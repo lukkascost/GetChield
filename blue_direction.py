@@ -39,5 +39,5 @@ otrila.append(c2)
 otrila.append(c3)
 
 
-#otrila.toGraph(xlim=[-100, 100], ylim=[-100, 100])
+otrila.toGraph(xlim=[-100, 100], ylim=[-100, 100])
 lero =1 
