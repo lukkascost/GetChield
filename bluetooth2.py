@@ -15,6 +15,9 @@ name = bl2.bluetooth_name()
 bl2.start()
 bl3 = bluetooth.bluetooth("/dev/ttyUSB1","544A1638145E")
 bl3.start()
+
+bl4 = bluetooth.bluetooth("/dev/ttyACM0","544A1638145E")
+
 print name
 if name.find("BLE3")!=-1:
 	bl2.set_point(12.5,-21.8)
@@ -59,8 +62,46 @@ while True:
 			elif (radian >292.5 and radian<=337.5):
 				string = "DIR"#SUDESTE
 			print radian,cont,string
-			
-	#pontos.append((str(anterior),string,radian))
-	#print pontos
-	#print "beacon 1 rssi:{}\tbeacon 2 rssi: {}\t beacon 3 rssi: {}".format(bl1.resBeacon.rssi,bl2.resBeacon.rssi,bl3.resBeacon.rssi)
-			
+
+
+
+date = datetime.now()
+d1  = d1.radius
+d2  = d2.radius
+d3  = d3.radius
+angulo = radian
+
+print date
+
+year = date.year/100
+year = year*100
+year = date.year - year
+print year
+
+	
+day =       "{0:05b}".format(date.day)
+month =     "{0:04b}".format(date.month)
+year =      "{0:07b}".format(year)
+hour =      "{0:05b}".format(date.hour)
+minute =    "{0:06b}".format(date.minute)
+distance1 = "{0:04b}".format(d1)
+distance2 = "{0:04b}".format(d2)
+distance3 = "{0:04b}".format(d3)
+angle =     "{0:09b}".format(angulo)
+
+
+stringBit =  day+month+year+hour+minute+distance1+distance2+distance3+angle
+print stringBit
+print day,month,year,hour,minute,distance1,distance2,distance3,angle
+print hex(int(stringBit,2))[-12:].upper()
+
+
+bl4.send("1\n")
+time.sleep(1)
+bl4.send("22\n")
+time.sleep(1)
+bl4.send("4\n")
+time.sleep(1)
+bl4.send(hex(int(stringBit,2))[-12:].upper() + "\n")
+time.sleep(1)
+

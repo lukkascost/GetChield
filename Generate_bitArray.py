@@ -1,6 +1,9 @@
 from datetime import datetime
+from lib.Devices import bluetooth
+from lib.Geometrics.Circle import * 
+from Classes import *
 
-date = datetime(2017,01,30, 11,50,01)
+date = datetime.now()
 d1  = 10
 d2  = 2
 d3  = 11
@@ -29,3 +32,6 @@ stringBit =  day+month+year+hour+minute+distance1+distance2+distance3+angle
 print stringBit
 print day,month,year,hour,minute,distance1,distance2,distance3,angle
 print hex(int(stringBit,2))[-12:].upper()
+
+
+
