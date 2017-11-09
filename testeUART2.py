@@ -1,7 +1,7 @@
 from serial import Serial
 import time
 
-serialPort = Serial("/dev/tty.usbserial", 115200, timeout=2.0)	
+serialPort = Serial("/dev/ttyACM0", 115200, timeout=1.0)	
 if (serialPort.isOpen() == False):
     serialPort.open()
 serialPort.flushInput()
@@ -12,7 +12,7 @@ while(1==1):
     outStr = raw_input("texto:")
     inStr = ''
     while (inStr is ""):
-        serialPort.write(outStr)
+        serialPort.write(outStr+"\n")
         time.sleep(0.05)
         inStr = serialPort.read(serialPort.inWaiting())
 

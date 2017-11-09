@@ -7,15 +7,15 @@ bl2 = bluetooth("/dev/ttyUSB0","544A1638145E")
 name = bl2.bluetooth_name()
 bl3 = bluetooth("/dev/ttyUSB1","544A1638145E")
 if name.find("BLE3")!=-1:
-        bl2.set_point(12.5,-21.6)
-        bl3.set_point(-12.5,-21.6)
+        bl2.set_point(100,-173)
+        bl3.set_point(-100,-173)
 elif name.find("BLE1")!=-1:
-        bl2.set_point(-12.5,-21.6)
-        bl3.set_point(12.5,-21.6)
+        bl2.set_point(-100,-173)
+        bl3.set_point(100,-173)
 else: 
         exit()
 
-with open("Samples/Measurements/Tree_To_One/blackboard/d25/10m_045g.txt", mode='w') as f:
+with open("Samples/Measurements/Tree_To_One/blackboard/d200/5m_225g.txt", mode='w') as f:
         f.write("{},{},{}\n".format(bl1.circle.center.x,bl2.circle.center.x,bl3.circle.center.x))
 cont = 0
 while(cont<70):
@@ -41,6 +41,6 @@ while(cont<70):
         if save == 1:
 		cont = cont + 1
 		print bl1.resBeacon.rssi,bl2.resBeacon.rssi,bl3.resBeacon.rssi
-                with open("Samples/Measurements/Tree_To_One/blackboard/d25/10m_045g.txt", mode='a') as f:
+                with open("Samples/Measurements/Tree_To_One/blackboard/d200/5m_225g.txt", mode='a') as f:
                         f.write("{},{},{}\n".format(bl1.resBeacon.rssi,bl2.resBeacon.rssi,bl3.resBeacon.rssi))
         

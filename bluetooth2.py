@@ -2,13 +2,16 @@ from lib.Devices import bluetooth
 from lib.Geometrics.Circle import * 
 from Classes import *
 import math as mt
+from datetime import datetime
 import time
 
 macs = ["544A1638145E", "5C313EFE25F4", "5C313EFE5127"] 
-#search_mac = "544A1638145E" #HM-10
+search_mac = "544A1638145E" #HM-10
 #search_mac = "F75DEAB95758" #EST VERDE
 #search_mac = "DBEE5864CDF2" #EST AZUL
-search_mac = "DBEE5864CDF2" #kontact
+#search_mac = "DBEE5864CDF2" #kontact
+#search_mac = "B0481AC1361E" #Iphone lucas
+#search_mac = "F079602AD48F" # MACBOOK
 
 
 bl1 = bluetooth.bluetooth("/dev/ttyAMA0",search_mac)
@@ -35,7 +38,7 @@ else:
 pontos = []
 radian = 0
 string = ""
-while True:
+while string=="":
 	time.sleep(1)
 	d1 = circle(bl1.circle.center, distanceOfSignalPower(bl1.resBeacon.rssi, n=2.75)*100) 
 	d2 = circle(bl2.circle.center, distanceOfSignalPower(bl2.resBeacon.rssi, n=2.75)*100) 
@@ -70,10 +73,11 @@ while True:
 
 
 date = datetime.now()
-d1  = d1.radius
-d2  = d2.radius
-d3  = d3.radius
+d1  = int(d1.radius)
+d2  = int(d2.radius)
+d3  = int(d3.radius)
 angulo = radian
+print d1,d2,d3
 
 print date
 
@@ -88,9 +92,9 @@ month =     "{0:04b}".format(date.month)
 year =      "{0:07b}".format(year)
 hour =      "{0:05b}".format(date.hour)
 minute =    "{0:06b}".format(date.minute)
-distance1 = "{0:04b}".format(d1)
-distance2 = "{0:04b}".format(d2)
-distance3 = "{0:04b}".format(d3)
+distance1 = "{0:04b}".format(d1/100)
+distance2 = "{0:04b}".format(d2/100)
+distance3 = "{0:04b}".format(d3/100)
 angle =     "{0:09b}".format(angulo)
 
 
@@ -109,3 +113,7 @@ time.sleep(1)
 bl4.send(hex(int(stringBit,2))[-12:].upper() + "\n")
 time.sleep(1)
 
+bl1.stop()
+bl2.stop()
+bl3.stop()
+bl4.stop()
