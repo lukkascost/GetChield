@@ -33,5 +33,12 @@ print stringBit
 print day,month,year,hour,minute,distance1,distance2,distance3,angle
 print hex(int(stringBit,2))[-12:].upper()
 
+bl4 = bluetooth.bluetooth("/dev/tty.usbserial","DBEE5864CDF2")
+#bl4 = bluetooth.bluetooth("/dev/tty.usbserial","DBEE5864CDF2")
+bl4.start()
+
+while(True):
+        print bl4.resBeacon.rssi
+        time.sleep(1)
 
 

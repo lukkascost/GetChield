@@ -5,18 +5,22 @@ import math as mt
 import time
 
 macs = ["544A1638145E", "5C313EFE25F4", "5C313EFE5127"] 
+#search_mac = "544A1638145E" #HM-10
+#search_mac = "F75DEAB95758" #EST VERDE
+#search_mac = "DBEE5864CDF2" #EST AZUL
+search_mac = "DBEE5864CDF2" #kontact
 
 
-bl1 = bluetooth.bluetooth("/dev/ttyAMA0","544A1638145E")
+bl1 = bluetooth.bluetooth("/dev/ttyAMA0",search_mac)
 bl1.set_point(0.0,0.0)
 bl1.start()
-bl2 = bluetooth.bluetooth("/dev/ttyUSB0","544A1638145E")
+bl2 = bluetooth.bluetooth("/dev/ttyUSB0",search_mac)
 name = bl2.bluetooth_name()
 bl2.start()
-bl3 = bluetooth.bluetooth("/dev/ttyUSB1","544A1638145E")
+bl3 = bluetooth.bluetooth("/dev/ttyUSB1",search_mac)
 bl3.start()
 
-bl4 = bluetooth.bluetooth("/dev/ttyACM0","544A1638145E")
+bl4 = bluetooth.bluetooth("/dev/ttyACM0",search_mac)
 
 print name
 if name.find("BLE3")!=-1:
